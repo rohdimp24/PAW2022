@@ -1,0 +1,954 @@
+commentText	commentClassification
+please get it verified will merge once verified .	COMPLETENESS_SUGGESTION
+add support for join with roles table	CODE_SUGGESTION
+we don t need to add graphql tag .macro separately . we can import it from apollo client now . we can import like import gql usequery from apollo client 	CODE_SUGGESTION
+please give us the query so that we can analyze .	COMPLETENESS_SUGGESTION
+camelcase	SPELLING_SUGGESTION
+why proper description of changes missing ?	DOCUMENTATION_SUGGESTION
+hardcoded to true ? if this is just a stub please add some comments and todo to tag it for later .	BUGGYCODE_SUGGESTION
+kindly note we also have addition from controller .	LOGICAL_SUGGESTION
+please rename this file	SPELLING_SUGGESTION
+ e a b fe a c ad c then i guess the companyid should be part of the reason type and should be used along with id to create a key at ui level else caching will be a problem across companies	BUGGYCODE_SUGGESTION
+please resolve the conflicts . .	LOGISTICS_SUGGESTION
+correct indentation to single tabs . dual tabs used here .	REFACTORING_SUGGESTION
+on hold as discussed with vidya .	LOGISTICS_SUGGESTION
+ d aae b ea c e f a this is nice thing i guess a e ec aa b a c we can also try to use this some of outletservice apis 	REUSE_SUGGESTION
+is this properly formatted ?	QUESTIONING
+ we don t need the handler here . this functionality should be internal to the each join . so i think we should keep it in joinscard component . external to joinscard component always should be add update or remove whole join object .	BUGGYCODE_SUGGESTION
+as discussed with a c bb c ee ca f this is for now storing the url as well as the dashboard id . further contextual changes can be expected . this is alright for the first cut .	COMPLETENESS_SUGGESTION
+ brand support brand support do below strings also like that point down 	CODE_SUGGESTION
+only conflict .	LOGISTICS_SUGGESTION
+this should be there as we are storing multiple entity wise data	LOGICAL_SUGGESTION
+this can be covered using tus specific service layer . the controller layer should be generic .	BUGGYCODE_SUGGESTION
+fix indentation .	REFACTORING_SUGGESTION
+callback is mainly for stating that a delivery report has been successfully received by notification consumer . we let the feedback processor deal with the transaction message id .	LOGICAL_SUGGESTION
+ a e a f b e d d ed e we have three grey shades in out theme can we use any of grey .light grey .main grey .dark ?	REUSE_SUGGESTION
+ f ea d fb a f c you will be applying it based on selectedfilters and supportedfilters . these are your sources . you can use these two and show the filter	CODE_SUGGESTION
+foreign key here .	BUGGYCODE_SUGGESTION
+please resolve the conflict .	LOGISTICS_SUGGESTION
+why ?	QUESTIONING
+can we create a constant for week month then iterate it ?	BUGGYCODE_SUGGESTION
+please get it verified and update the pr once verified .	COMPLETENESS_SUGGESTION
+its a default part of the gst gst cgst sgst igst cess advalorem state cess 	LOGICAL_SUGGESTION
+please use isrequired feature of the formdefinitions .	REUSE_SUGGESTION
+ e a b fe a c ad c can we go with withstyles withtheme from material ui . so that we don t have to hardcode value . we can directly access from theme . for example widgetoptions .jsx component all .	BUGGYCODE_SUGGESTION
+ atomicreference any specific region to use this here ?	CODE_SUGGESTION
+can we extract this to a common place ? is there a chance for any other modules to use it ?	REFACTORING_SUGGESTION
+you can do a stronger check with stringutils .isempty but upto you	LOGICAL_SUGGESTION
+please verify and update pr .	COMPLETENESS_SUGGESTION
+did you test this change e a b fe a c ad c 	COMPLETENESS_SUGGESTION
+please merge after verification .	COMPLETENESS_SUGGESTION
+igst to be considered only when the state of buyer and seller is different .	BUGGYCODE_SUGGESTION
+update comment	DOCUMENTATION_SUGGESTION
+why it is in sanity ?	QUESTIONING
+remove after	REFACTORING_SUGGESTION
+please do not comment this . if there is any lag issue in consumer mappings will get handled from here .	LOGICAL_SUGGESTION
+please get it verified and update pr for merging .	COMPLETENESS_SUGGESTION
+pr looks good to me . if anirudh s suggestion can be implemented then well and good . pre approving it	COMPLETENESS_SUGGESTION
+we probably don t need an accordion here .	LOGICAL_SUGGESTION
+use space before and after 	REFACTORING_SUGGESTION
+space is required ?	REFACTORING_SUGGESTION
+this looks to me common can we extract this ? i don t see any custom logic for any of the vendor	REFACTORING_SUGGESTION
+it should be default value 	BUGGYCODE_SUGGESTION
+what is this function required for ?	QUESTIONING
+why we are calling model to controller ? it s not good practice .	BUGGYCODE_SUGGESTION
+rename the ids of these text views .	SPELLING_SUGGESTION
+i think fromoutlet id outlet id combination should be added as unique key . this has to be handled in mdm also .	LOGICAL_SUGGESTION
+gst data preparation is not required directly available in helper function use that	REUSE_SUGGESTION
+ f ea d fb a f c wont a div suffice ?	QUESTIONING
+need to add companies currencyid fk here as well .	CODE_SUGGESTION
+please delete this as requested and use the generic fucntion .	CODE_SUGGESTION
+please make re executable query .	BUGGYCODE_SUGGESTION
+same use comman function .	BUGGYCODE_SUGGESTION
+ outletdata this find all array conditions array id array fromoutletid tooutletid fields array id state id issez isdta recursive outletdata set combine outletdata n outlet id n please check the applygst function in outlet .php	CODE_SUGGESTION
+any strings shouldn t be hardcoded . always needs to import from strings .js file .	BUGGYCODE_SUGGESTION
+please delete commented line	REFACTORING_SUGGESTION
+we will need to enhance our frame work to be able to fetch data from multiple databases in one widget . or some other solution on this lines . we will park this for now . and continue with java widget for retailer app .	LOGICAL_SUGGESTION
+please check the sql query performance as it has many joins and also check if required indexes are being used on the query and the joins .	BUGGYCODE_SUGGESTION
+ e a b fe a c ad c let describe with some comments why we are doing this ?	DOCUMENTATION_SUGGESTION
+ c fe ea c cd ee please test extended projection is working fine or not after this change .	COMPLETENESS_SUGGESTION
+please use spaces for and brackets and use brackets for single line if conditions as well .	REFACTORING_SUGGESTION
+why is this added ? 	QUESTIONING
+why remove else it will create problem in custom fields .	BUGGYCODE_SUGGESTION
+delete commented code .	REFACTORING_SUGGESTION
+some calculation is not needed as it is already done in helper function please use that	REUSE_SUGGESTION
+you will have to fetch the schemetype for the schemegroup id from schemegroups table then compare it with those strings .	LOGICAL_SUGGESTION
+ b be b a ce a fd d aae b ea c e f a please check this changes as well	COMPLETENESS_SUGGESTION
+alias .contains or exprojalias .contains ?	QUESTIONING
+please resolve conflicts .	LOGISTICS_SUGGESTION
+what reasons are these ? specific to an order ? if yes then i think order id should be an input .	LOGICAL_SUGGESTION
+it is not a blocker but structuring is wrong in model . is it n to n relation ? or to n relation ?	BUGGYCODE_SUGGESTION
+shouldn t the default value be true ?	QUESTIONING
+please get it tested and update pr for merge .	COMPLETENESS_SUGGESTION
+do you see that it will ever occur coz line already checks it . it should definitely result in values in string array . but i wonder what happens to strings like this amount or amount payment jan . . . please test e a b fe a c ad c 	LOGICAL_SUGGESTION
+try a non mutating way of delete	CODE_SUGGESTION
+no default value for is active but is hard coded in add function it should work fine .	LOGICAL_SUGGESTION
+query please ?	COMPLETENESS_SUGGESTION
+please use constants instead of hard coding strings for now and months localtime .	BUGGYCODE_SUGGESTION
+please rename these actions	SPELLING_SUGGESTION
+rerunable query .	BUGGYCODE_SUGGESTION
+ f ea d fb a f c please create enums for sales return status	BUGGYCODE_SUGGESTION
+ a e a f b e d d ed e props .theme .spacing is not the right property of radius why can t we use theme .shape .borderradius ?	BUGGYCODE_SUGGESTION
+ d e ca d a c d bda can we stop this addition if http is already there in the string in the start if strpos url http dont add else add the amazon s bucket and outletimages data . 	LOGICAL_SUGGESTION
+ import gql usequery from apollo client import type queryresult operationvariables from apollo client 	CODE_SUGGESTION
+give proper name for key and value	SPELLING_SUGGESTION
+remove apollo react hooks dependency .	CODE_SUGGESTION
+not to merge .	LOGISTICS_SUGGESTION
+please format the code .	REFACTORING_SUGGESTION
+i do not think that we need to check empty if config is coming as empty we should pass it to widget action as it is .	LOGICAL_SUGGESTION
+space after 	REFACTORING_SUGGESTION
+please get it verified and update the pr .	LOGISTICS_SUGGESTION
+if none retailer transaction are approved then also its show collection approve is pending or zero .	BUGGYCODE_SUGGESTION
+ abb ac dcb a ac f please review this . why we are fetching areas in top level .	BUGGYCODE_SUGGESTION
+ b dfc e b aaff please update .	COMPLETENESS_SUGGESTION
+objects .nonnull	CODE_SUGGESTION
+give proper name of this method and remove null check . stringutils .isem pty is sufficient it check for null also	SPELLING_SUGGESTION
+what is the condition will create here . it will have or or and what is . please check if we do or used it will not use index and create issue .	CODE_SUGGESTION
+spelling mistake	SPELLING_SUGGESTION
+remove this otherwise will create conflict	BUGGYCODE_SUGGESTION
+ verified	LOGISTICS_SUGGESTION
+if any of the warehouse id not sent then it will fetch all data . please check this .	BUGGYCODE_SUGGESTION
+not needed .	LOGICAL_SUGGESTION
+ b dfc e b aaff please update .	COMPLETENESS_SUGGESTION
+please fix the indentations also if possible convert the space indentations to tab . spaces consume a lot of space in code .	REFACTORING_SUGGESTION
+will phase involves in making these configurable ?	QUESTIONING
+check for response ! null also	CODE_SUGGESTION
+use owr standard formate of sending broadcast use constansts variables 	CODE_SUGGESTION
+please use brackets for single if line .	REFACTORING_SUGGESTION
+please don t keep code commented if you need keep all the valid cases please keep it else keep the valid one .	REFACTORING_SUGGESTION
+ e a b fe a c ad c you used this variable to keep temporary modified state in project dialog . now this is getting used in other implementation as well . this is a duplicate data of measures and dimensions i .e . selectedmeasures selecteddimensions respectively . in future we will have confusion of which veritable is doing what ! ! ! playground should have only modified i .e . applied state of any data i .e . measures dimensions joins etc . otherwise we should move dialog change states inside respective component .	BUGGYCODE_SUGGESTION
+this is in efficient . please use hasduplicates function which is an optimized way to find whether there is any duplicates or not .	BUGGYCODE_SUGGESTION
+do we wish to keep default as ?	QUESTIONING
+all joins using index .	BUGGYCODE_SUGGESTION
+this is a custom company specific mdm where few skunits have to be order in a defined time span example milk buying more is problem and wastage and buying less will have stocking issues . secondary orders are taken in excel sheet and the same is uploaded in bizom . and the same data is being considered for primary order sale they have a limited set of skunits hence this custom company specific mdm was done . list of skunits procured from the client .	LOGICAL_SUGGESTION
+i feel that if we are going with this change then we will have to implement the second click thing . earlier it was on the side and not it s on the center . . so check with product once .	COMPLETENESS_SUGGESTION
+ e a b fe a c ad c can t we put arrayutils .js validation .js both in main utils of pwa app . can be used globally .	LOGICAL_SUGGESTION
+chacha first parameter passed in url after is sent in this request pass and the same is being used . for this . assests assetsassign this request pass 	CODE_SUGGESTION
+warehouse .warehouseoutletid is missing fromoutlet .id to be replaced with warehouse .warehouseoutletid .	BUGGYCODE_SUGGESTION
+is this confirmed with product that you want all the auto hide duration to be seconds unless mentioned otherwise ?	QUESTIONING
+remove pr statement .	REFACTORING_SUGGESTION
+rename this file	SPELLING_SUGGESTION
+please change this . onedit ontableedit onbasetableedit	SPELLING_SUGGESTION
+ f d d f b cf fd c please specify the tickets ?	LOGISTICS_SUGGESTION
+ e a b fe a c ad c why ? is the token not present in the running context ?	QUESTIONING
+query is commented so it will not create	BUGGYCODE_SUGGESTION
+ then data if data data .downloadwidgetdata data .downloadwidgetdata .downloadfilename 	CODE_SUGGESTION
+what are the action types ? can t we keep it constants enums ?	BUGGYCODE_SUGGESTION
+ abb ac dcb a ac f please merge if this is working fine .	LOGISTICS_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+is the requirement here to show unit price per case ? 	QUESTIONING
+will it resolve the crash ? 	BUGGYCODE_SUGGESTION
+please fix the spelling	SPELLING_SUGGESTION
+this is old code which is not been changed we can pick it up later in code cleaning .	REFACTORING_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+why is this being called for every element ?	BUGGYCODE_SUGGESTION
+run a loop and build data .	CODE_SUGGESTION
+we are doing an expensive job keeping only a loading state all the way to playground component .	BUGGYCODE_SUGGESTION
+please create a index on status and entity . since i have checked it s on transactionid and createdby only .	CODE_SUGGESTION
+kindly open a bug and get the team aligned to fix it allowing it to reduce any db load caused wrong values being stored in db .	LOGISTICS_SUGGESTION
+remove commented lines .	REFACTORING_SUGGESTION
+ ffc ed dbf da ae like typography .fontsize typography .fontsize 	CODE_SUGGESTION
+admintoken can be made private variable inside function .	CODE_SUGGESTION
+please correct the grammar use primary	SPELLING_SUGGESTION
+keep it as constant	BUGGYCODE_SUGGESTION
+same function is defined getoutlettype handle the condition of active there with a parameter .	REUSE_SUGGESTION
+please remove commented code	REFACTORING_SUGGESTION
+resolve the conflicts .	LOGISTICS_SUGGESTION
+to make it ellipsis and in width we are adding class on grid . is it not solving passing props as display inline and nowrap in typography 	CODE_SUGGESTION
+use now instead of date directly .	CODE_SUGGESTION
+if this function is technically not generating an irn e invoice then can we use a different function name as it can cause confusion . just a concern if we can change generateirn to generateeway cancelirn to canceleway etc 	LOGICAL_SUGGESTION
+remove commented code .	REFACTORING_SUGGESTION
+can t we use spacing directly by replacing theme spacing	QUESTIONING
+we have to understand the purpose of the theme i think many places we are misusing it . few points are as follows . spacing spacing steps should used in padding and margin . sizing should be used in height width minwidth etc . . . spacing and sizing should be used in proper steps . . for example there are made maintain a scaling factor through out the app . if you want understand layout read this 	LOGICAL_SUGGESTION
+please update tooltip as per product requirement .	SPELLING_SUGGESTION
+is it orderdetails or paymentdetails ? please go through file i see everything related to order . not commenting on each line . 	QUESTIONING
+please get it tested and update pr will merge after verification .	COMPLETENESS_SUGGESTION
+use this same try catch block in line 	CODE_SUGGESTION
+reformat the code .	REFACTORING_SUGGESTION
+please don t hard code the string . please use constants for it .	BUGGYCODE_SUGGESTION
+then we are not doing that way while bulk fulfillment is that doing correct .	LOGICAL_SUGGESTION
+why is outlets .created not sufficient ?	QUESTIONING
+can we merge this ?	LOGISTICS_SUGGESTION
+it is verified so merging it 	LOGISTICS_SUGGESTION
+ flow 	CODE_SUGGESTION
+ b dfc e b aaff explain select area . id area . name area . erpid area . warehouse id from areas as area where area . id or area . erpid null and area . is active no index being used please break the query .	BUGGYCODE_SUGGESTION
+why this change is required ? and why are we not passing in mountkey instead ?	QUESTIONING
+resolve conflict	LOGISTICS_SUGGESTION
+i would suggest some information context should be there .	DOCUMENTATION_SUGGESTION
+ process .env .react app retailer app tnc url means it s set from environment file check your .env file it not set	CODE_SUGGESTION
+please also check if id exists else it s no point of read .	CODE_SUGGESTION
+better if we can make widgetid instead of dashboardid in this query . need to do it backend first	CODE_SUGGESTION
+please share query log to check for indexes . 	COMPLETENESS_SUGGESTION
+can t we use any other comments which is already there	CODE_SUGGESTION
+should we not update status and crsdata with this failure .	QUESTIONING
+instead of passing would be better to make it the input parameters as integer and pass null where ever we do not need it . the above condition would then change to page null limit null . this is because page is valid input for pagination .	LOGICAL_SUGGESTION
+is duplicate erp id being checked ?	QUESTIONING
+this code used place and might be helpfull for other place also so create common method in baseactivty	CODE_SUGGESTION
+remove invalid spaces .	REFACTORING_SUGGESTION
+can we add this is a generic css file where this class key can support in all pages where ever necessary reason avoid duplicate code . file getskunitsviewnew revamp	REFACTORING_SUGGESTION
+please use constants for sizes .	BUGGYCODE_SUGGESTION
+why this is required ?	QUESTIONING
+reformat the code .	REFACTORING_SUGGESTION
+please use proper naming conventions for the variables instead of item skunitnametextview and item . correct them .	SPELLING_SUGGESTION
+ ffc ed dbf da ae what review i will do here i don t know ! if you see this unnecessary file committed and this file has not been removed but because of this non sense one line we have done comments does it worth ffc ed dbf da ae a e ec aa b a c 	REFACTORING_SUGGESTION
+ aaf e a d e b c d d db sir comparision model supported reports are breaking with the new changes .	BUGGYCODE_SUGGESTION
+inthis we can add condition of not search for this id and other its are mapping .	CODE_SUGGESTION
+use numberutils class	CODE_SUGGESTION
+remove bug comment	REFACTORING_SUGGESTION
+ b be b a ce a fd please check an the same and update .	COMPLETENESS_SUGGESTION
+this is not addressed . ffc ed dbf da ae 	BUGGYCODE_SUGGESTION
+ e a b fe a c ad c please have a look that image should fix into the row properly .	BUGGYCODE_SUGGESTION
+remove this logs	REFACTORING_SUGGESTION
+as per the crash log here the intent object is null . please recheck once .	COMPLETENESS_SUGGESTION
+please make a procative of adding space after and before . please add space before and after 	REFACTORING_SUGGESTION
+is this available for all companies ?	QUESTIONING
+if adding description is not required as per current requirement then please remove this state and cleanup all usage .	REFACTORING_SUGGESTION
+please use constants for these numbers instead of magic numbers writing in code .	BUGGYCODE_SUGGESTION
+doing update on this pr .	LOGISTICS_SUGGESTION
+this looks to me a revert of some changes . why such changes ?	QUESTIONING
+please use the constant for . resolve the conflict also .	LOGISTICS_SUGGESTION
+can we removed as per earlier comment .	REFACTORING_SUGGESTION
+ aaf e a d e b c d d db . this component name is onscroll and doing slide of its content which is not recommended approach . . if we are using this for slide the top bar keep it there it self 	BUGGYCODE_SUGGESTION
+format the code .	REFACTORING_SUGGESTION
+convert all indentations to tabs remove all invalid spaces in end of line the starting of line also has invalid spaces in many places .	REFACTORING_SUGGESTION
+we will not hardcode like this !	BUGGYCODE_SUGGESTION
+do you need a separate variable for updatecommdata ?	CODE_SUGGESTION
+please use constants for request code instead of using magic numbers like this .	BUGGYCODE_SUGGESTION
+please don t use hardcoded strings .	BUGGYCODE_SUGGESTION
+we can remove this since devops will manually create the schema	REFACTORING_SUGGESTION
+this and the next part you are sorting twice . can we not sort it once ?	LOGICAL_SUGGESTION
+can directly use r .string .call submit in setmessage method .	CODE_SUGGESTION
+ e a b fe a c ad c i have a clarification on below points kindly help me out to understand . for major pr s definitely we need test case but for minor changes we do not require . so if reviewer has option to override it would be great . clarified over call it will run the test cases on every pr create or update . if the build failed not related to merge whether that merge will be successful or not . clarified over call check for all test cases and related packaged downloaded successfully 	QUESTIONING
+what was the issue previously ?	QUESTIONING
+ merge segmentchangerequests releated quries 	CODE_SUGGESTION
+formmatting	REFACTORING_SUGGESTION
+why this change ? selection key will contain the last state of the joins within the dialog component .	CODE_SUGGESTION
+is this verified code ?	QUESTIONING
+avoid using magic numbers .	BUGGYCODE_SUGGESTION
+why u removed constraint ?	QUESTIONING
+please make this argument string optional for onclose .	CODE_SUGGESTION
+ b dfc e b aaff please check the necessary change requested by kandi bhai nad close this . or please post the explanation for the same .	COMPLETENESS_SUGGESTION
+object .keys currentjson .length should be good	CODE_SUGGESTION
+please add warehouseids conditions .	CODE_SUGGESTION
+this might need in master . check with other .	LOGISTICS_SUGGESTION
+change to pda	CODE_SUGGESTION
+it is a bug that i have resloved now previously if retry happened why should we make that transaction edit and fulfill ?	QUESTIONING
+some questions on my end . we are storing when the user last accessed . with this we will only have the last accessed modified but never the history data . should that be considered ? . why are we coupling isstarred and accessed column of the same table ? . as far as i understand they are different functionalities . 	QUESTIONING
+is it still crashing . account null check is already there . version check ?	BUGGYCODE_SUGGESTION
+should we make this enum ? if it is kept as strings then any new msg format can just put in anything they want . will it have any impact on the caching ? if no then do we need these constants here ?	BUGGYCODE_SUGGESTION
+please get the string literals from strings .xml 	BUGGYCODE_SUGGESTION
+remove engine innodb 	REFACTORING_SUGGESTION
+please get it tested will merge after verification .	COMPLETENESS_SUGGESTION
+saveddata variable and savedata variable are different .	CODE_SUGGESTION
+always use object response indexed array is difficult to handle and understand the response . search for this objectfields in code you ll find sample .	BUGGYCODE_SUGGESTION
+ this shouldn t be hardcoded . 	BUGGYCODE_SUGGESTION
+next time try to use existing colum instead of creating new one . ignore column name can use any column for any other purpose it is just for column height	REUSE_SUGGESTION
+how did this piece of code broke now ? i think it was like this since long .	BUGGYCODE_SUGGESTION
+please remove invalid unnecessary spaces in end of line	REFACTORING_SUGGESTION
+please raise pr to releaseintegration branch	LOGISTICS_SUGGESTION
+add foreign key	BUGGYCODE_SUGGESTION
+ widgetdrawer should not be part of table . it should be part of widget .jsx that way it s a property if widget irrespective of any data view .	CODE_SUGGESTION
+ a e a f b e d d ed e we don t need this just import enum outlet company status and reuse it .	CODE_SUGGESTION
+please use getsettingfromname function	CODE_SUGGESTION
+remove comment code .	REFACTORING_SUGGESTION
+please check the function its list and its give only array of ids then why doing this .	BUGGYCODE_SUGGESTION
+ activityformdatas array column activityformdatas activityformfield id is this required ? where are you using activitycount ?	BUGGYCODE_SUGGESTION
+please delete the php file .	BUGGYCODE_SUGGESTION
+did you try the default marker i think it used the same image that you are adding in custom marker . is there some reason for using custom marker other than the image ?	QUESTIONING
+you could use a getordefault method	CODE_SUGGESTION
+please get it verified will merge after verification .	COMPLETENESS_SUGGESTION
+can we put it in single if statement	REFACTORING_SUGGESTION
+all these function and extra functions can be written in the new class	REFACTORING_SUGGESTION
+also they can always check whether this setting is on for that user .	LOGICAL_SUGGESTION
+shouldn t it null itself ?	CODE_SUGGESTION
+please give proper name .	SPELLING_SUGGESTION
+why ? here	QUESTIONING
+we should also check with null	COMPLETENESS_SUGGESTION
+remove commented lines .	REFACTORING_SUGGESTION
+why are we checking only the retailer table everywhere ? where is the lookup on ocm table to get company mapping ?	BUGGYCODE_SUGGESTION
+can you handle this in the columnpropertiesdialog component itself ? you are already passing the type there	CODE_SUGGESTION
+no filter by cursor id ? only one query as of now ?	QUESTIONING
+kishan i m happy that you looked over the same but goin ahead if they do allow then we will have to work again and we may not remember about this hence please take a look at the necessary changes and do the same .	COMPLETENESS_SUGGESTION
+ fb f df c f please keep the indentation proper	REFACTORING_SUGGESTION
+space after 	REFACTORING_SUGGESTION
+ a e a f b e d d ed e this branch is breaking for me . there are dependency missing in this branch . steps to reproduce . checkout this branch . run yarn at root directory i .e . bizom next . try to run project in retailernativeapp 	BUGGYCODE_SUGGESTION
+please use orm functions like save and find .	CODE_SUGGESTION
+use reason field instead of this	CODE_SUGGESTION
+ d aae b ea c e f a data inline card please get yourself or parthiv to fill out the document regarding the product and questions being asked . this is so that product can keep track of the questions that are stored in our database	LOGICAL_SUGGESTION
+are you usning intentionaly same column claim for date for both datarange and field ? ? ? ? ? ? ? ? 	BUGGYCODE_SUGGESTION
+why this special check ? conditionconfigindex will have the updated index no ?	QUESTIONING
+addscheme revamp is a page for multischeme only just adding this info handling of multischemeenable was not necessary as when multischemeenable is disabled addscheme revamp will never open .	LOGICAL_SUGGESTION
+why is there a getter method for this ? ideally we shouldn t be exposing this entire map set maybe a specific cube but not the whole map	BUGGYCODE_SUGGESTION
+this is wrong why are we using create while editing the values ?	BUGGYCODE_SUGGESTION
+remove commented lines .	REFACTORING_SUGGESTION
+ aaf e a d e b c d d db this will effect retailer app as well need to check before we merge . i will check retailer app and let you know .	COMPLETENESS_SUGGESTION
+i think you have to override this method in order to get the above comments .	LOGICAL_SUGGESTION
+add unique index colun on erp id	CODE_SUGGESTION
+why hardcoding required based on view port width ?	QUESTIONING
+primary button will solve by passing these two props no need of class variant contained color primary 	CODE_SUGGESTION
+add recursive 	LOGICAL_SUGGESTION
+indentation	REFACTORING_SUGGESTION
+why the roleid is hardcoded ?	BUGGYCODE_SUGGESTION
+ import currency signs from bizom mui lib utils charactercodes please keep this above	CODE_SUGGESTION
+next time please write other test cases that will cover the negative cases also .	COMPLETENESS_SUGGESTION
+please comment if this is default entity type for scheme .	QUESTIONING
+use undersocre for keyname	SPELLING_SUGGESTION
+looks good to me . however improvements can be done here . . comment type can be changed similar to the one in vansales widget . here we can override the comment type method to support our own . . too many duplicated code . would appreciate if this could be extracted to a common place within this file . d aae b ea c e f a d acaf d bc aaf e a d e b c d d db f e f f a a f 	REFACTORING_SUGGESTION
+if !empty json encode . . else set the value of extradata to null .	CODE_SUGGESTION
+merging as force index is wrong .	BUGGYCODE_SUGGESTION
+you can mock this as well	CODE_SUGGESTION
+ e a b fe a c ad c approving it now without review so that you can megre will review it soon and highlight issues if any .	COMPLETENESS_SUGGESTION
+if the change is so regular can we add the field in database somewhere please discuss with the team and update .	LOGICAL_SUGGESTION
+ data inline card why you have doing different branch for same code . it should merge one branch and do cherry pick or back merge not two prs . default response type changed to json to xml it will effect multiple places and its the comon api used in most places .	BUGGYCODE_SUGGESTION
+ e a b fe a c ad c how will this impact ui caching ? is the reason hardcoded in reason id for all cases ?	QUESTIONING
+please correct the string resource id .	BUGGYCODE_SUGGESTION
+please check the test cases for this file . i think it will fail	BUGGYCODE_SUGGESTION
+should this be checked against dashboard view permission ?	QUESTIONING
+do we need this component ? we are only using it in paymentbalancelist .jsx but no other components .	CODE_SUGGESTION
+please use meaningful name to variable . warehouseidlist as key warehouseid 	SPELLING_SUGGESTION
+why optional of list ? won t a list suffice ?	CODE_SUGGESTION
+ f d d f b cf fd c no need this pull request just keep the changes in your branch .	LOGISTICS_SUGGESTION
+issue geo location getting converted to exponential form so map api fails . fix is to parse the double value as it is not in scientific notation	BUGGYCODE_SUGGESTION
+why is company id being used here ?	QUESTIONING
+please remove all existing variables for which you assigned helper function values . instead of assigning to existing variables you can use them directly only while doing sum you can use variables to store sum .	REFACTORING_SUGGESTION
+please get it tested and update pr .	COMPLETENESS_SUGGESTION
+just a suggestion not a blocker change requested we can use else if here bcoz either of the conditions will be executed once .	LOGICAL_SUGGESTION
+please remove extra unnecessary line each tab uses bytes	REFACTORING_SUGGESTION
+ b dfc e b aaff please make the necessary correction and close this .	COMPLETENESS_SUGGESTION
+is it ok to put it here . if possible can we move it to any constants file .	BUGGYCODE_SUGGESTION
+remove this	REFACTORING_SUGGESTION
+indentation	REFACTORING_SUGGESTION
+do not miss title of pr add bug title in it	LOGISTICS_SUGGESTION
+please fix all the indentations	REFACTORING_SUGGESTION
+once try adding same combination of data with active and active in a single upload .	COMPLETENESS_SUGGESTION
+same as the comment regarding variable naming	SPELLING_SUGGESTION
+please resolve conflict in code .	LOGISTICS_SUGGESTION
+ f ea d fb a f c on changing the subquery table your source of truth will be updated . now if your updated source of truth does not contain this old projection will it show up ?	QUESTIONING
+you can use map instead of reduce	CODE_SUGGESTION
+it should be array or object what its default data type wise if present .	LOGICAL_SUGGESTION
+ e a b fe a c ad c if this pr is complete we have to do it before merge otherwise will not have track or might forget .	LOGISTICS_SUGGESTION
+rename this function appropriately	SPELLING_SUGGESTION
+ f ea d fb a f c why we are doing hardcoding ? this is not recommended .	BUGGYCODE_SUGGESTION
+please don t do this . front end shouldn t be handling the splitting and parsing of join keys projection . find another way for this or let s discuss it	BUGGYCODE_SUGGESTION
+also no limit and offset here ?	QUESTIONING
+space after and space before and after 	REFACTORING_SUGGESTION
+space before and after 	REFACTORING_SUGGESTION
+correct indentation 	REFACTORING_SUGGESTION
+ value icon to index tabprops props point down value icon to index . . .tabprops props 	CODE_SUGGESTION
+can we not fetch only id from database ?	LOGICAL_SUGGESTION
+indentation	REFACTORING_SUGGESTION
+why are you checking same condition times and its not right way to do amtinclugst 	BUGGYCODE_SUGGESTION
+merging as this is just a change in header .	LOGISTICS_SUGGESTION
+is there a particular reason for doing this ? if there s no key then we should return null itself	CODE_SUGGESTION
+is the fetched data of outlet also being pushed to variable ?	QUESTIONING
+please get it verified and update pr will merge after verification .	COMPLETENESS_SUGGESTION
+ const communicationpreference props point down const communicationpreference classes this will help you not to write props .classes . everywhere .	CODE_SUGGESTION
+input for further developments if the type is fixed set an array entitytypesalias array skunits skunits groups configure read alias .design type then you can use it as entitytypesalias entity a lot of if conditions can be skipped . just a input for avoiding many if conditions .	CODE_SUGGESTION
+we don t need this button here it s of no use .	BUGGYCODE_SUGGESTION
+for log statements use for putting the values	CODE_SUGGESTION
+ f e f f a a f can we not use helpmewith there ?	QUESTIONING
+why is company id being used here ?	QUESTIONING
+fix unnecessary new lines	CODE_SUGGESTION
+please add !empty condition	CODE_SUGGESTION
+make it add dimensions properties change key of icon	CODE_SUGGESTION
+if we are not showing the update location in this case we may need to make it visible when it s synced . better to write else case . reformat the code .	REFACTORING_SUGGESTION
+what is the change here ? is there any issue warning with previous code ?	QUESTIONING
+always use object response indexed array is difficult to handle and understand the response . search for this objectfields in code you ll find sample .	BUGGYCODE_SUGGESTION
+let s look into why we can t work with height from contentrect and try to fixed the root cause . let s not hardcode by looking at your screen . what of this screen running into embedded view like bizom web or mobile app ?	LOGICAL_SUGGESTION
+there are other branches with same name	LOGISTICS_SUGGESTION
+space before 	REFACTORING_SUGGESTION
+ this can t be hardcoded . warehouseids needs to be taken from particular outlet s warehouses .	BUGGYCODE_SUGGESTION
+ e a b fe a c ad c please look into your change request .	COMPLETENESS_SUGGESTION
+please fill values all caps 	SPELLING_SUGGESTION
+resolve this apart from this approved .	COMPLETENESS_SUGGESTION
+please remove extra unnecessary line each tab uses bytes	REFACTORING_SUGGESTION
+please fix the alignment for whatever line changes have been made . here there are spaces and tabs so please convert all of it to tabs . if using vscode view render whitespace . if using sublime text 	REFACTORING_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+the code is already merged please check and delete pr if not required .	LOGISTICS_SUGGESTION
+as checked in code multiple warehouses is handled . hence approved .	LOGISTICS_SUGGESTION
+please resolve the conflicts .	LOGISTICS_SUGGESTION
+more joins will have issue in execution . need to optimise this query .	BUGGYCODE_SUGGESTION
+what would be the price if none of them are present ?	QUESTIONING
+please use form definition to make the field as required or not it is not compulsory for all companies .	CODE_SUGGESTION
+is this naming correct ?	SPELLING_SUGGESTION
+remove invalid spaces .	REFACTORING_SUGGESTION
+ ffc ed dbf da ae string variable name should me same as the actual string . check other variables how it s done . also string should be this select companies to see details 	SPELLING_SUGGESTION
+ scrollwrap entitydata .map entity index scroller key entity item entity .id entity entity index index scrollwrap 	CODE_SUGGESTION
+please remove commented code	REFACTORING_SUGGESTION
+we had decided on a hashset of urls to bypass the setting of appcontext . this needs to be changed .	BUGGYCODE_SUGGESTION
+remove unnecessary lines	REFACTORING_SUGGESTION
+ c a c b a e e please rebase this with development branch again .thr are many other bug s commits in this pr	LOGISTICS_SUGGESTION
+please use setting from getsettingfromname function please avoid usage of companysettings variable	LOGICAL_SUGGESTION
+ b e e c c bb f okay understood basically getting the same source of truth everywhere and using that . . instead of creating confusion . f ea d fb a f c please note and implement accordingly	CODE_SUGGESTION
+please fix indentation	REFACTORING_SUGGESTION
+please remove unnecessary space they take bytes each .	REFACTORING_SUGGESTION
+handle check here too .	CODE_SUGGESTION
+what does means ?	BUGGYCODE_SUGGESTION
+please also check the case of sales returns of different pages . if multiple sale returns are being combined shown .	CODE_SUGGESTION
+recursive first it will give one row but it s have join tables also .	LOGICAL_SUGGESTION
+why this is required ?	QUESTIONING
+ performance impact here ! this network call is within a loop which is calling for each sku . we already have product details with cart query why we are doing this ?	BUGGYCODE_SUGGESTION
+both query can be combined in one query alter table companies add currency id int null default null add constraint companies currencyid fk foreign key currency id references currencies id 	CODE_SUGGESTION
+remove the contain and use function of outletareamappings model getareaandwarehouseinfoforoutlet	REFACTORING_SUGGESTION
+please use constants	BUGGYCODE_SUGGESTION
+please correct the spelling of the variable paymentid used .	SPELLING_SUGGESTION
+boolean isfirsr is not required use allschemeids if allschemeids is empty then not required to add separator if it s not empty then add separator .	CODE_SUGGESTION
+should we take symbol as enum ?	QUESTIONING
+please never miss title of pr .	LOGISTICS_SUGGESTION
+ f ea d fb a f c okay then do onselection applied 	CODE_SUGGESTION
+add discription what fix u have done .	DOCUMENTATION_SUGGESTION
+should this be coming up in the pr request ?	QUESTIONING
+please update if we can merge the same .	LOGISTICS_SUGGESTION
+use getdefault 	CODE_SUGGESTION
+please make sure that this api will return a json response in all the cases even if the setting exists but is disabled .	CODE_SUGGESTION
+delete commented line .	REFACTORING_SUGGESTION
+call this method above the cursor query method because query will be unnessesory and not closed in url is null	CODE_SUGGESTION
+remove the space	REFACTORING_SUGGESTION
+i think there should be a key on phone number	LOGICAL_SUGGESTION
+import usestate directly instead of react .usestate 	CODE_SUGGESTION
+ b c a beeaebbdf will this key will be available in old company ?	QUESTIONING
+better to add a single info logger statement to print the request context like companyid userid . . whatever is need to uniquely identify the request .	LOGICAL_SUGGESTION
+remove commented code .	REFACTORING_SUGGESTION
+ f e f f a a f if there is time please write the test cases . otherwise looks good to me	COMPLETENESS_SUGGESTION
+remove commented styles	REFACTORING_SUGGESTION
+if it s empty can be removed right ? please check .	REFACTORING_SUGGESTION
+ transactionmanager transactionmanager propagation propagation .supports why are we using these specifics for transactions ?	BUGGYCODE_SUGGESTION
+use a constant for this value	BUGGYCODE_SUGGESTION
+ ab a a fcf f please use proper indentation and format all the files .	REFACTORING_SUGGESTION
+please check the ordering of the co ordinates	CODE_SUGGESTION
+remove the commented code .	REFACTORING_SUGGESTION
+ selectedjoins default join ?	CODE_SUGGESTION
+please update if its verified .	COMPLETENESS_SUGGESTION
+this also one type of hardcoding as we are following the multiplier ratio .	BUGGYCODE_SUGGESTION
+use stringutils .isnotempty	CODE_SUGGESTION
+are we following any specific hql patter to write quires ? as join rom .outlet . companymappings this join is different form the earlier ones i .e . outlet o on ral .outlet .id o .id also i am seeing that there s a lot of hql quires written specifically just to use the joins replacing the native repo functions i think that we can find some way to do use the mapped table entities in the native function only i .e . findallbyglobaloutletidandtypeorderbymodifiedasc 	CODE_SUGGESTION
+controller gets only strings why are we using array ?	BUGGYCODE_SUGGESTION
+move this up arrow up 	CODE_SUGGESTION
+it needs to be as seed data so api is not required .	LOGICAL_SUGGESTION
+we are complicating things by adding two states here we should handle with once state because at time this component will view in one scope i .e . new or update 	BUGGYCODE_SUGGESTION
+ cdaaddc c d b e suppose your api fails somewhere . you need to test out that the failure logs are stored	COMPLETENESS_SUGGESTION
+correct this	BUGGYCODE_SUGGESTION
+please get it verified will merge after verification .	COMPLETENESS_SUGGESTION
+please share the query log and check if indexes is being used . 	COMPLETENESS_SUGGESTION
+userid has been removed	REFACTORING_SUGGESTION
+you missed the hint . i ll let you figure it out from the outdated comments	CODE_SUGGESTION
+ verified	LOGISTICS_SUGGESTION
+please use string constants instead of hard coding strings like this .	BUGGYCODE_SUGGESTION
+use numberutils class for parsing	CODE_SUGGESTION
+please use constants for request code instead of using magic numbers like this .	BUGGYCODE_SUGGESTION
+please get it verified and update pr for merge .	COMPLETENESS_SUGGESTION
+variable name should be diffreent . it would not be date .	SPELLING_SUGGESTION
+getwarehousetypedata already available .	REUSE_SUGGESTION
+put a default value here .	BUGGYCODE_SUGGESTION
+please fix space	REFACTORING_SUGGESTION
+cnflict	LOGISTICS_SUGGESTION
+use constants with proper meaningful name instead of magic number .	BUGGYCODE_SUGGESTION
+can we reduse repetation of same code here ? ? ? ?	BUGGYCODE_SUGGESTION
+why hours ?	BUGGYCODE_SUGGESTION
+remove commented line	REFACTORING_SUGGESTION
+hi vasu these changes are merged to sanity branch on friday . it s being tested by kishore . will be deleting this pr !	LOGISTICS_SUGGESTION
+also make the query re executable using insert ignore into	BUGGYCODE_SUGGESTION
+ok what i meant was this . accordionsummarycontext ? object something like this if provided then we will you those css classes else we will use default css . this way we will able to keep functionality away from component definition .	CODE_SUGGESTION
+ e a b fe a c ad c ok i will look into it . please assign ticket to me .	LOGISTICS_SUGGESTION
+please make this private unless we are going to use it somewhere else	CODE_SUGGESTION
+master multidistributor branch have fixed . please check and remove if not requried .	REFACTORING_SUGGESTION
+please remove this condition also .	REFACTORING_SUGGESTION
+return new responseentity responsedto httpstatus .ok ?	CODE_SUGGESTION
+ 	LOGISTICS_SUGGESTION
+check for !empoty conditon for outlets outletids key if possible change outletids variable name to outletid	SPELLING_SUGGESTION
+please get it verified we can merge it then	COMPLETENESS_SUGGESTION
+remove unnecessary tab .	REFACTORING_SUGGESTION
+here might be a problem because if suppose in is active key in mdm someone set value blank then it will throw sql issue because the default value of is active value is .	BUGGYCODE_SUGGESTION
+use stringutils .iszero here .	CODE_SUGGESTION
+formatting required .	REFACTORING_SUGGESTION
+please remove after keyword	REFACTORING_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+please make this re runnable	BUGGYCODE_SUGGESTION
+please get it verified so that we can merge it .	COMPLETENESS_SUGGESTION
+can we convert this to a single insert ignore into query .	REFACTORING_SUGGESTION
+you can keep it in if block as movetofirst return boolean .	CODE_SUGGESTION
+query please and check the performance as i see it will user primary key but please share the query .	BUGGYCODE_SUGGESTION
+why haven t we used helper functions ?	BUGGYCODE_SUGGESTION
+please use comman function igetuserandroleinfo in managerole .php file 	REUSE_SUGGESTION
+is this an array as well ?	QUESTIONING
+remove the responsetype . 	REFACTORING_SUGGESTION
+ a e a f b e d d ed e let s remove this file as of now currently not used .	REFACTORING_SUGGESTION
+please check the spacing .	REFACTORING_SUGGESTION
+what does mean here ?	BUGGYCODE_SUGGESTION
+don t need tostring method . within the log message will do	CODE_SUGGESTION
+can we use objects .isnull ?	CODE_SUGGESTION
+what is the issue of passing props like this ? point down textlinkicon dashboardicon color action fontsize small titleaccess dashboard textlinkicon 	QUESTIONING
+let us talk when you are refactor this code i think we can do this in a standard way but will try to understand your approach first .	COMPLETENESS_SUGGESTION
+always use object response indexed array is difficult to handle and understand the response . search for this objectfields in code you ll find sample .	BUGGYCODE_SUGGESTION
+format the code .	REFACTORING_SUGGESTION
+please change the variable name . warehouseoutletdata because same variable shouldn t have different types of data .	SPELLING_SUGGESTION
+what is the violation that s happening ? is this the list part of dashboard ?	QUESTIONING
+please use constants	BUGGYCODE_SUGGESTION
+ ffc ed dbf da ae i have pushed one commit in this pr please review this should solve ui issues .	COMPLETENESS_SUGGESTION
+can we use max height here ? height will also suffice but i feel max height will be better .	LOGICAL_SUGGESTION
+ e a b fe a c ad c confused for this filtering please explain .	QUESTIONING
+what is this for ?	QUESTIONING
+why like query ?	BUGGYCODE_SUGGESTION
+will ucwords strtolower work for all languages ?	QUESTIONING
+same comman function	BUGGYCODE_SUGGESTION
+ abb bdc c bd a fff a but you are justing getting active scheme . i think u can make two quires then . please provide the query .	COMPLETENESS_SUGGESTION
+ d acaf d bc aaf e a d e b c d d db do you think we should bring streaming support for this widget ? then in one shot this widget will be most optimized .	LOGICAL_SUGGESTION
+it will work without query	CODE_SUGGESTION
+improper way of logging use params for placeholders	BUGGYCODE_SUGGESTION
+result either send text boolean . in the last result is converted to boolean . i think only for array response it s being converted you can ignore this .	LOGICAL_SUGGESTION
+ please update ticket and qa aligned and verified .	LOGISTICS_SUGGESTION
+ f e f f a a f please add zoho ticket here	LOGISTICS_SUGGESTION
+sender mobisy is also present in notification producer .yml file and whatsappregistrationinput .java class . please confirm whether we need to change there as well . e a b fe a c ad c 	CODE_SUGGESTION
+only revision will not work . need to handle in code also .	BUGGYCODE_SUGGESTION
+ f ea d fb a f c i am still not convinced with this still you can merge this . we discuss this later and find better solution .	COMPLETENESS_SUGGESTION
+remove divider from here .	CODE_SUGGESTION
+reformat the code .	REFACTORING_SUGGESTION
+some widget have boolean parameters in the end and some dont . is there a reason ? i thought we were only going with custom widget changes	QUESTIONING
+ this outlet debitnote will work here . please test and commit the same .	COMPLETENESS_SUGGESTION
+share query and check for indexes .	COMPLETENESS_SUGGESTION
+write separate queries for both columns this can give error in worst case scenario 	BUGGYCODE_SUGGESTION
+typography doesn t have ondoubleclick property where is it coming from ?	CODE_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+reformat the code .	REFACTORING_SUGGESTION
+indentation is wrong .	REFACTORING_SUGGESTION
+remove commented line .	REFACTORING_SUGGESTION
+remove commented code	REFACTORING_SUGGESTION
+ aaf e a d e b c d d db please put a comment in the test cases regarding the decision and what is to be done .	DOCUMENTATION_SUGGESTION
+don t use my in any kind of variable names please correct it .	SPELLING_SUGGESTION
+correct indentation for all options single tab needed .	REFACTORING_SUGGESTION
+default always null	CODE_SUGGESTION
+raise pr for releaseintegration .	LOGISTICS_SUGGESTION
+use string constant instead of hardcoding string for play store url . also please note you are using http which is not secured . use https . we are already using same url in erroractivity . try to create constant and reuse it across the app .	BUGGYCODE_SUGGESTION
+can you please help me recall that one problem ?	QUESTIONING
+please use trim	CODE_SUGGESTION
+ a e a f b e d d ed e follow variable name as camelcase and constants as upper case . ex . camel camelcase upper upper case 	SPELLING_SUGGESTION
+getresponsetype always uses json by default please keep that as default . and make changes in the below code . and if get responsetype xml set responsetype to xml 	CODE_SUGGESTION
+tested in local with the code it s working fine but there is a issue with select all option when you change the drop down element please check the same .	BUGGYCODE_SUGGESTION
+please mark a todo here for the chart type	COMPLETENESS_SUGGESTION
+move code after to next line .	REFACTORING_SUGGESTION
+ f ea d fb a f c i am not convinced with the approach we took here . as we are projecting we have solved this using doubly linkedlist approach to optimise complexity . but here what we are doing more iteration than simple array implementation . also we are switching between linkedlist array in every single action . now we are playing with less number of items i .e . joins now we are not observing much difference here . even if we play with joins that s a huge number i believe for this case we won t observe much of a difference there . so please discuss and take opinion from ba f f c cbe e a b fe a c ad c aaf e a d e b c d d db others as well and proceed . note please make sure there is no other change except re arrange in this pr 	BUGGYCODE_SUGGESTION
+ e a b fe a c ad c can we put projectionvalue ?	QUESTIONING
+var aocolumns atargets defaultcontent name invoiceid refer payments index revamp .ctp file for the sample . we can skip writing extra code fnrowcallback function if the data has to be shown directly in the ui .	BUGGYCODE_SUGGESTION
+remove line	REFACTORING_SUGGESTION
+please add alternate string resources for all these new string literals .	CODE_SUGGESTION
+as discussed we need to handle one case for chart type oned . for oned we should use searchableselect . please make necessary changes .	CODE_SUGGESTION
+ verified	LOGISTICS_SUGGESTION
+we can remove this and reuse enum outlet company status above .	CODE_SUGGESTION
+this line is needed . please check with qa once dhulappa checked and verified this screen i had fixed some data in backend for same use case .	COMPLETENESS_SUGGESTION
+please add spaces after 	REFACTORING_SUGGESTION
+it has been verified by bhaskar hence merging it .	LOGISTICS_SUGGESTION
+why selecting beat id when beat is hidden ? if it is for ensuring that no beat is selected atleast add some constant for 	BUGGYCODE_SUGGESTION
+what is this api for ?	QUESTIONING
+please resolve conflict .	LOGISTICS_SUGGESTION
+please get it verified and update pr will merge after verification .	COMPLETENESS_SUGGESTION
+ cdaaddc c d b e pls add test case for the same after that we can merge .	COMPLETENESS_SUGGESTION
+please get it verified we can merge after verification .	COMPLETENESS_SUGGESTION
+here does it required backward compatibility ? ? ? ?	QUESTIONING
+at this level can we do a useexplicitapply function ? similar to what is there in joins ?	CODE_SUGGESTION
+why this change ?	QUESTIONING
+ arrhsntaxabletotal payment skunit hsncode here the above line used to create a dual level array . . for which extra loop of array sum was needed bhai we skipped it now by making necessary changes in the code .	LOGICAL_SUGGESTION
+why checking string here . as in function is expecting skunitids as array then there is not requirement to check whether skunitids are string . 	BUGGYCODE_SUGGESTION
+ e a b fe a c ad c please remove semicolon 	REFACTORING_SUGGESTION
+put it in strings .xml . and try to use correct grammar .	BUGGYCODE_SUGGESTION
+this will work or not .	QUESTIONING
+why are we doing this part ? once base table gets updated and you go to main playground level the fetchconfigurations will be called due to changes in basetable object so it should automatically update . if not there might be a bug at the lower level .	CODE_SUGGESTION
+please check if the rowerror will give an undefined error since it is not declared or initialised before its usage here . however has been declared in the new loop .	BUGGYCODE_SUGGESTION
+what id is this ? source of this data ?	QUESTIONING
+this should be isset then .	REFACTORING_SUGGESTION
+why the space here ?	REFACTORING_SUGGESTION
+can we please put into any constants file use it .	BUGGYCODE_SUGGESTION
+i think we are getting the tooutletids passed in mdm file only . should we stop transactions for outlets which are not active ? what if they are inserting old data for outlets which are inactive on current date ?	QUESTIONING
+consider the below scenario area named ramnagar with area id in zone gujarat area named ramnagar with area id in zone madhyapradesh will area id be lost with your changes ?	QUESTIONING
+please correct alignment .	REFACTORING_SUGGESTION
+we are using this function only once . so why can t we keep it in onsubmitreturnrequest function .	CODE_SUGGESTION
+please get it verified and check the other functions where this is being called as well . we can merge then .	COMPLETENESS_SUGGESTION
+ f ea d fb a f c do we need to refactor the parameters i .e . columns now ? because previously it was in different keys and nested structure for parameter but now we are getting everything in flat single array . 	QUESTIONING
+for app we are not added . please do change in the callscontrller also .	CODE_SUGGESTION
+i dont think the job will finish in m . how much time is it taking for one client ?	BUGGYCODE_SUGGESTION
+ cd b c a dcbae e r .string .inactive sku already exists	CODE_SUGGESTION
+we need only terms and conditions here so only import that no need to import 	BUGGYCODE_SUGGESTION
+ f ea d fb a f c can you show me a screenshot or flow of the same ?	QUESTIONING
+don t we need outlined icon ?	QUESTIONING
+remove this resources .getstring from all place . use hardcoded in invoice . becauuse it might create problem if user change device language to then this method return string in hindi if present in hindi string file	BUGGYCODE_SUGGESTION
+no we don t use bizom alias . because multi lingual will break . so please remove this comment	BUGGYCODE_SUGGESTION
+returning null for now ?	QUESTIONING
+is there no smdown ? if there is then i believe the condition is simplified	QUESTIONING
+what if it s clear at this time ?	QUESTIONING
+why we have removed this seperate pops using whole theme ?	QUESTIONING
+this may impact loadsheet summary screen . check if this visibility changes is handled there as well .	COMPLETENESS_SUGGESTION
+ f ea d fb a f c i have one suggestion . can we integrate table selector dialog to playground just as we have integrated it in the subqueryplayground level ? i feel this issue will be solved . please check by creating multiple level subquery as a basetable	LOGICAL_SUGGESTION
+ abb ac dcb a ac f please address the comments .	COMPLETENESS_SUGGESTION
+can we use this cdnote user payment outlet creditnote instead of loadmodel ?	CODE_SUGGESTION
+keeping it on hold for verification .	LOGISTICS_SUGGESTION
+remove console .log and add loader when a request is sent .	REFACTORING_SUGGESTION
+please remove this	REFACTORING_SUGGESTION
+this is unnecessary extraction please remove from here .	REFACTORING_SUGGESTION
+why is this removed ?	QUESTIONING
+use case would be syncing data based on time . but will that break anything ?	QUESTIONING
+remove invalid space	REFACTORING_SUGGESTION
+why is this required ?	QUESTIONING
+ b c a beeaebbdf we follow this everywhere for proper code readibility . so please add 	REFACTORING_SUGGESTION
+remove this	REFACTORING_SUGGESTION
+similar pieces of code please de duplicate it	BUGGYCODE_SUGGESTION
+dual declaration of count . please avoid .	BUGGYCODE_SUGGESTION
+please check the test cases	COMPLETENESS_SUGGESTION
+create a tag and use it across the file for logging .	CODE_SUGGESTION
+ border top left radius props props .theme .shape .borderradius px point down border top left radius props props .theme .radius px 	CODE_SUGGESTION
+to avoid null pointer exception change to this if ars hershey auto scheduling action .equals schedularinputs .getactionkey 	BUGGYCODE_SUGGESTION
+please resolve conflicts .	LOGISTICS_SUGGESTION
+have you tried editing and removing widget and dashboard from api did it work ?	QUESTIONING
+branch issue as different ticket data is present .	LOGISTICS_SUGGESTION
+verified 	LOGISTICS_SUGGESTION
+if we flip the case also then there will be no chance of subzones being the startlevel . and many companies don t even have subzone usage . bc e cbaa c c which companies actually use subzones ?	QUESTIONING
+we can use for loop one and create data in one loop na .	BUGGYCODE_SUGGESTION
+ react grid layout . . keep the exact dependency so that it doesn t upgrade unknowingly anytime in other new developers system .	CODE_SUGGESTION
+it should be roles table fetch basis not hard code .	BUGGYCODE_SUGGESTION
+sir same page is used for order edit as well . this part of code will hamper all the orders that will be edited .	BUGGYCODE_SUGGESTION
+as per our chat communication there was more to add to this will merge after it s added .	COMPLETENESS_SUGGESTION
+ a e a f b e d d ed e there are lot of commented code in this file please look into those .	REFACTORING_SUGGESTION
+ onclick handleclick 	CODE_SUGGESTION
+its qa verified please check and resolve conflict 	LOGISTICS_SUGGESTION
+i have one query but the changes otherwise looks good to me . please ensure that for when then conditions taggedconfig should be present if applicable 	CODE_SUGGESTION
+empty line can be removed .	REFACTORING_SUGGESTION
+if we are using then for cleaning the config . we don t do any cleanup on error of remove widget . so . we can remove the catch block here . 	CODE_SUGGESTION
+i looks like a duplicate file of recentorders .js please remove if it s not required .	REFACTORING_SUGGESTION
+please rename this you are not sending the outlet list you are building it	SPELLING_SUGGESTION
+please correct the spelling credit 	SPELLING_SUGGESTION
+ .filter boolean or some such variant can do the same	CODE_SUGGESTION
+condition not required	BUGGYCODE_SUGGESTION
+ f ea d fb a f c why can t we re use or modify this one ?	QUESTIONING
+spelling and camelcasing	SPELLING_SUGGESTION
+are both id and text necessary ? asking since both will always have the same value of payments .billno .	LOGICAL_SUGGESTION
+use fall back .	CODE_SUGGESTION
+ b c a beeaebbdf please add where condition on companyid as well . for reference refer retaileroutletdetails or retailerorderperformance widget code .	CODE_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+can we use stringutil .isempty here for string ? ? ?	CODE_SUGGESTION
+wrongly committed please revert to old line .	LOGISTICS_SUGGESTION
+please share query log to check for indexes .	COMPLETENESS_SUGGESTION
+getmslachievementnew function name has been used in many models for faster and better readability can we add model name in function getmslachievementforordernew getmslachievementforsalereturnnew getmslachievementforsalenew the one in msl controller can be kept as getmslachievementnew . please change the app version as well to notify the app to use new api else old portal and new app will throw undefined function error .	SPELLING_SUGGESTION
+should be boolean naming convention isnegative 	BUGGYCODE_SUGGESTION
+remove console .	REFACTORING_SUGGESTION
+ f ea d fb a f c i think we are doing cleanup here . instead of clean up can we let s do a validation in the component itself . don t allow user to add another join if table field of last join is not filled . 	LOGICAL_SUGGESTION
+pre approving the pr some minor changes to be completed . post the changes please merge	COMPLETENESS_SUGGESTION
+if we make or condition like warehouse id warehouse id skunit id skunit ids is better .	LOGICAL_SUGGESTION
+spacing before and after and 	REFACTORING_SUGGESTION
+ f ea d fb a f c codewise looks good to me . please test the use case properly though and impact areas . approving from my side .	COMPLETENESS_SUGGESTION
+do not hardcode ! please use theme .radius 	BUGGYCODE_SUGGESTION
+please add default values .	BUGGYCODE_SUGGESTION
+can you check the sql log and its using index or not .	CODE_SUGGESTION
+can be merged as this is just removal of the code which was unnecessary .	LOGISTICS_SUGGESTION
+ a c bb c ee ca f better to correct it for the future .	BUGGYCODE_SUGGESTION
+remove console .log commands .	REFACTORING_SUGGESTION
+kandi bhai give me min some commits are missing of will merge to development	LOGISTICS_SUGGESTION
+verified ticket 	LOGISTICS_SUGGESTION
+please get it verified and update pr once verified .	COMPLETENESS_SUGGESTION
+ f ea d fb a f c aren t you doing it for next column ? this is confusing . please explain clearly what is being done here . .	QUESTIONING
+can we also have a check for brandnameurl having entries ?	CODE_SUGGESTION
+from backend this will be a list non optional	BUGGYCODE_SUGGESTION
+we will not create dependency on react native in theme object . keep theme dummy json object . let s import dimensions in component it s required .	CODE_SUGGESTION
+remove extra spaces	REFACTORING_SUGGESTION
+ d aae b ea c e f a if this the class field for request coming in parallel for companies in diff retailer dbs how will this work ?	BUGGYCODE_SUGGESTION
+please resolve conflicts	LOGISTICS_SUGGESTION
+ e a b fe a c ad c looks good to me . please resolve confict then we can do ahead	LOGISTICS_SUGGESTION
+can it not be a single fetch instead of lookup and fetch ?	QUESTIONING
+needs to be alter table invoicetemplatemappings add index warehuseidindex warehouse id moduletype using btree 	CODE_SUGGESTION
+verified ticket 	LOGISTICS_SUGGESTION
+use 	CODE_SUGGESTION
+if there is a value from getsimilarhiddenprojection then do we need a default ? also hasn t flow shown an error where you have an empty object and are trying to get the alias part of something that s not there	CODE_SUGGESTION
+you can remove this function	REFACTORING_SUGGESTION
+why addall is required ? why not a direct insert to hashset one by one ?	CODE_SUGGESTION
+remove this line	REFACTORING_SUGGESTION
+you can remove this as you are not performing any operation on it	REFACTORING_SUGGESTION
+ . why is update of is direct fulfill and draft required here ? . what if payment has already synced ? . also when calldone can there be a case where payment needs to be reset ?	QUESTIONING
+why is this extra check required ?	QUESTIONING
+ f ea d fb a f c export const item trans item trans . why we are writing in capital case again ? . not handled plurals e .g . item items 	BUGGYCODE_SUGGESTION
+please check if vehicle id is valid entry as foreign key is added .	CODE_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+why a map as return value ?	QUESTIONING
+this will show partial output to user . eg . if alias given by user is amount of payments and duration is jan then originallabel will be amount of payments jan . . . . . . but you will show on ui only amount and jan . . . . . . other part will be missed i believe i .e . of payments this is blocker . my suggestion setgroup should be originallabel .substring lastindexof comparisonmodelaliasdelimiter originallabel .length setlabel should be originallabel .substring lastindexof comparisonmodelaliasdelimiter 	BUGGYCODE_SUGGESTION
+claimlimitgroup .php hasmany claimlimitgroupdetail claimlimitgroupdetail .php hasmany claimlimitgroup please check linkage . which is master which is slave .	LOGISTICS_SUGGESTION
+please fix the alignment	REFACTORING_SUGGESTION
+correct indentation .	REFACTORING_SUGGESTION
+remove commented lines .	REFACTORING_SUGGESTION
+ f ea d fb a f c as discuss use icons from the library . we don t need this here .	BUGGYCODE_SUGGESTION
+use showtoast method and don t use hard coded messages . get it from strings .xml .	BUGGYCODE_SUGGESTION
+please remove hard coded false .	REFACTORING_SUGGESTION
+i believe this assignment has to be done only when skudata is active is passed else this force activation is not necessary val warehouseskunit is active and isactive this will lead to force activation . is this expected behaviour . please check with api integration and product team as well .	COMPLETENESS_SUGGESTION
+if you using specific columns plz add that not .	LOGICAL_SUGGESTION
+use space after comma 	REFACTORING_SUGGESTION
+please add default values .	BUGGYCODE_SUGGESTION
+please check for the map data also	CODE_SUGGESTION
+what is this page record size meant for ?	QUESTIONING
+have few points here . need to override color from respective app pwa app . we need to add shade for primary color otherwise many places will break point down ! . we need to know about the color system 	BUGGYCODE_SUGGESTION
+please check the feasibility to remove this function and re use the getoutlettype function 	REFACTORING_SUGGESTION
+i didn t understand it ?	QUESTIONING
+please get it verified and update pr will merge .	COMPLETENESS_SUGGESTION
+ const offset setoffset usestate 	CODE_SUGGESTION
+company id is removed from sql please remove this reference . 	REFACTORING_SUGGESTION
+why we have not reused customtextfield here ?	REUSE_SUGGESTION
+why this key name r ?	QUESTIONING
+exception is enough	LOGICAL_SUGGESTION
+as request go in gzip so js will not have issue in spaces . for that used to view properly .	LOGICAL_SUGGESTION
+change variable name	SPELLING_SUGGESTION
+check the filter order numbers .	BUGGYCODE_SUGGESTION
+why are you doing query to get design skunit id from here ? can t we get it from the base query for payments data ?	LOGICAL_SUGGESTION
+ e a b fe a c ad c please clean up few things here unnecessary console .log commented codes then rebase and merge to master .	REFACTORING_SUGGESTION
+please get it verified and update pr for merge .	COMPLETENESS_SUGGESTION
+remove active column from here .	CODE_SUGGESTION
+ b dfc e b aaff please update .	COMPLETENESS_SUGGESTION
+ a c bb c ee ca f this needs to be looked at	COMPLETENESS_SUGGESTION
+see if this can be converted to hooks format while you are at it	REFACTORING_SUGGESTION
+link this model in user .php and use the link instead of loadmodel .	CODE_SUGGESTION
+remove unnecessory extend of basedata	REFACTORING_SUGGESTION
+ aaf e a d e b c d d db is it required ? otherwise please cleanup .	REFACTORING_SUGGESTION
+ f ea d fb a f c what s in the table part ?	QUESTIONING
+ aaf e a d e b c d d db from gson side might be some parameter is missing . understood though why both are being used	QUESTIONING
+inline styles ! we will not do this !	BUGGYCODE_SUGGESTION
+ if header .getkey .startswith projectionkey header .getkey .contains projectionkey can we merge two block as discussed ? ? check and change if feasible .	LOGICAL_SUGGESTION
+a ! of projection field and projection alias can suffice no ?	CODE_SUGGESTION
+ b dfc e b aaff please update .	COMPLETENESS_SUGGESTION
+use loge because generaly at this point error occure in live user so it will helpfull for debugging	CODE_SUGGESTION
+change the variable name to something more suitable	SPELLING_SUGGESTION
+ f ea d fb a f c please look at this code const getalignment header value if ! !header .alignment header .alignment alignments .right header .alignment alignments .left return header .alignment if ! !header .datatype header .datatype data type .number typeof value data type .number return alignments .right return alignments .left how do we use getalignment in enhancedtablehead component ? ans keep this function outside of table component as i said in earlier component	CODE_SUGGESTION
+please do not hardcode ! make use of theme .spacing 	BUGGYCODE_SUGGESTION
+can t we use when like switch here instead of for loop ? please check .	LOGICAL_SUGGESTION
+there won t be any case where p .unitspercase ? if so we need to handle this .	BUGGYCODE_SUGGESTION
+convert it as kotlin class .	CODE_SUGGESTION
+why are we doing like this ? can we not add to the linkedhashset directly ?	BUGGYCODE_SUGGESTION
+delete this please .	REFACTORING_SUGGESTION
+please remove if not required	REFACTORING_SUGGESTION
+you can use the key generator class as mentioned in previous comment	CODE_SUGGESTION
+check if key is set then only proceed else throw error of no data found .	CODE_SUGGESTION
+please complete error handling	BUGGYCODE_SUGGESTION
+remove europa	REFACTORING_SUGGESTION
+i think we should keep this one as private method .	CODE_SUGGESTION
+please confirm with product team with the removal of the compulsion .	COMPLETENESS_SUGGESTION
+can we use a loop here instead of using set extract twice on the same dataset ?	BUGGYCODE_SUGGESTION
+remove unnecessory extend of basedata	REFACTORING_SUGGESTION
+resolve the conflicts and change the target branch to development .	LOGISTICS_SUGGESTION
+just pass the custommonths here like other filters . do required things inside respective component .	CODE_SUGGESTION
+i have following views this call is optional for showing payment details this call is mandatory for doing online payment so this call should be part of pay now button itself it should decided it show or not to show the button . 	LOGICAL_SUGGESTION
+please make all of these as optional as reports page doesn t use this and will not use it for their table view . legendposition ? boolean denotes optional . please check once on the reports page as this is not required .	CODE_SUGGESTION
+reformat the code .	REFACTORING_SUGGESTION
+two points here . please look into the console warning . warning each child in a list should have a unique key prop . . just use this material build in component ref . data inline card 	REUSE_SUGGESTION
+constraint user headquarter mappings user id fk foreign key user id references users id on delete restrict on update restrict constraint user headquarter mappings headquarter id fk foreign key headquarter id references headquarters id on delete restrict on update restrict	CODE_SUGGESTION
+ aaf e a d e b c d d db please try this with classname .	CODE_SUGGESTION
+use stringutils .isnotempty method	CODE_SUGGESTION
+is this done ? ?	QUESTIONING
+space after ! 	REFACTORING_SUGGESTION
+please run a for loop to extract data from outlets 	CODE_SUGGESTION
+what if position i think position start from 	QUESTIONING
+safer would be instead of 	CODE_SUGGESTION
+ f ea d fb a f c every time action we are converting structure from linked list array and vice versa . so we are using tree for doing operation and array for displaying component purpose . if i understand it correctly we are trying to use linkedlist structure to optimise iterations and performance . as per above execution are we really achieving our goal ? is it not costing us more ?	BUGGYCODE_SUGGESTION
+avoid dual tabs	REFACTORING_SUGGESTION
+if user need to add only update new area with existing area ids should be there if then it will removed na . in ui how it will work and api .	REFACTORING_SUGGESTION
+ typeid will contain the creditnote .id debitnote .id or the cdnote .transactionid ? just asking for information .	QUESTIONING
+this key is required to avoid duplicate insertion	LOGICAL_SUGGESTION
+is it verified ? please get it verified by creating a separate branch	COMPLETENESS_SUGGESTION
+this json will not work please dont use any extension such as json viewer	BUGGYCODE_SUGGESTION
+can we use the round when displaying the result in the ui field instead of using the result for further arithmetic operations ?	LOGICAL_SUGGESTION
+please get the string literals from strings .xml 	BUGGYCODE_SUGGESTION
+don t if if this will be help full ? please check in production build ? as we obfuscate the class in production .	COMPLETENESS_SUGGESTION
+please initialise to array then type cast it as object 	CODE_SUGGESTION
+indentation is wrong	REFACTORING_SUGGESTION
+fix indentation .	REFACTORING_SUGGESTION
+this will have issues when companyname has spaces special characters can we avoid using the company name ?	BUGGYCODE_SUGGESTION
+please intimate all the users who are using this api .	COMPLETENESS_SUGGESTION
+ abb bdc c bd a fff a but it s new query so both should be fail actually we are not expecting fail query on live any more .	LOGICAL_SUGGESTION
+please format .	REFACTORING_SUGGESTION
+why is this required ?	QUESTIONING
+only the last active user will be present was this required ?	QUESTIONING
+all these should be made local variables if they cannot be initialized as static final . these will not be thread safe and concurrent requests to same widget will over write each other values . please make changes in both the widgets . add them to the context map and then pass them around wherever needed or create a model class for this i would prefer model class .	BUGGYCODE_SUGGESTION
+indentation .	REFACTORING_SUGGESTION
+please check if the vat is or amount being stored .	COMPLETENESS_SUGGESTION
+indent using tabs	REFACTORING_SUGGESTION
+convert indentation of the current function being changed to tabs .	REFACTORING_SUGGESTION
+we have active column na we can check that or not .	QUESTIONING
+should we have the service worker handler here ? or is it not required ?	QUESTIONING
+we need to fix library issue .	BUGGYCODE_SUGGESTION
+sir there are more false cases should we add proceed false there as well ? discountscontroller .php	QUESTIONING
+why are we hard coding this value ?	BUGGYCODE_SUGGESTION
+resolve conflict	LOGISTICS_SUGGESTION
+why do you need classes ? won t root in usestyles work ?	CODE_SUGGESTION
+ a e a f b e d d ed e don t use only index as key try to create unique string with company id and all . suppose there is another loop in the same page . and developer don t check the already written loops key .	BUGGYCODE_SUGGESTION
+why are there css changes ? the ticket doesn t mention anything	QUESTIONING
+remove commented lines .	REFACTORING_SUGGESTION
+ ffc ed dbf da ae this was not there before please remove this diff	REFACTORING_SUGGESTION
+keep type imports at the bottom of all imports	CODE_SUGGESTION
+naming should understandable this name looks like a function name rather a response data . data companyinvoices 	SPELLING_SUGGESTION
+why key outlet in only one beat directly ?	CODE_SUGGESTION
+please resolve the conflict .	LOGISTICS_SUGGESTION
+add discription what change you have done .	DOCUMENTATION_SUGGESTION
+this creating unnecessary margin here point down ! 	REFACTORING_SUGGESTION
+it should be warehouseids from backend side	CODE_SUGGESTION
+can assertnull measures too currently we support only params in configurable widget .	QUESTIONING
+remove comment	REFACTORING_SUGGESTION
+why is the class util ? shouldn t it be a config class ? please rename here and wherever you think is necessary	SPELLING_SUGGESTION
+please get it verified and update the pr once verified .	COMPLETENESS_SUGGESTION
+correct indentation single tab needed .	REFACTORING_SUGGESTION
+ e a b fe a c ad c have to add key recursive concat list projections lindex 	CODE_SUGGESTION
+if you are looking for px height then maxheight extras .sizing .bystep 	CODE_SUGGESTION
+same id cannot run in loop .	BUGGYCODE_SUGGESTION
+please fix indentation	REFACTORING_SUGGESTION
+if this is specifit to ltmalesia then add condition also for ltmalecis . suppose if any other company enable this setting ententionally then it will break	BUGGYCODE_SUGGESTION
+please use same consistency . space space 	REFACTORING_SUGGESTION
+why we are querying usequeryclientcalender here again ? we already queried and we have the data as custommonths .	CODE_SUGGESTION
+ e a b fe a c ad c it s correct . passing argument here . ffc ed dbf da ae please take care of variable naming mentioned above .	SPELLING_SUGGESTION
+we can remove this	REFACTORING_SUGGESTION
+please check for it s working and merge this pr .	LOGISTICS_SUGGESTION
+ const downloadfile filename . . . 	CODE_SUGGESTION
+please remove exit	REFACTORING_SUGGESTION
+this change has introduced a bug a null pointer exception . due to this an outlet could not be associated with a company . i have handled this in below commit data inline card 	BUGGYCODE_SUGGESTION
+ b be b a ce a fd please pull out the repetitive code if we are still doing the changes in the same pr .	REFACTORING_SUGGESTION
+ ffc ed dbf da ae please rename this file as ledgers .jsx 	SPELLING_SUGGESTION
+can we define the type here instead of keeping it raw ?	CODE_SUGGESTION
+at product cart summary page . we filter out the products bases on active status . we need to add this check there also	CODE_SUGGESTION
+index userhqindex user id headquarter id add this in create table command 	CODE_SUGGESTION
+when the request for submitting claim is made from the web portal then the date conversion will fail as it is sent in the format d m y . hence will need to make it supportable for both d m y and y m d .	BUGGYCODE_SUGGESTION
+please use brackets for single if line .	REFACTORING_SUGGESTION
+space after 	REFACTORING_SUGGESTION
+please get it verified we can merge once verified .	COMPLETENESS_SUGGESTION
+correct indentation	REFACTORING_SUGGESTION
+you are not passing cell config here ?	QUESTIONING
+ e fd f dee de d the variable outletareamapping will have an array like was unit testing done on this ? 	BUGGYCODE_SUGGESTION
+done bhai merging it .	LOGISTICS_SUGGESTION
+unnecessary changes !	BUGGYCODE_SUGGESTION
+please get it verified and update pr .	COMPLETENESS_SUGGESTION
+ b be b a ce a fd if you are getting the active e way bills then it is fine .	LOGICAL_SUGGESTION
+why did not added single quote in valuesexploded 	BUGGYCODE_SUGGESTION
+are we hardcoding this ? specific to company ?	BUGGYCODE_SUGGESTION
+instead of removing this can we replace it with a blank ?	CODE_SUGGESTION
+move to previous fragment ? and starting new activity ? this should be already handled in onactivityresult . please check once .	CODE_SUGGESTION
+would recommend string builder rather then string and string concatenation in loop .	CODE_SUGGESTION
+format the code .	REFACTORING_SUGGESTION
+indentation is wrong please fix	REFACTORING_SUGGESTION
+get data after fetch of payments not join .	BUGGYCODE_SUGGESTION
+ please create rerunable query	BUGGYCODE_SUGGESTION
+instead of doing same classes and icon everywhere we can a override the tab once and use it everywhere . import muitab from material ui core tab and const tab withstyles palette . . . tab . . . muitab 	CODE_SUGGESTION
+there are pr please resolve it . data inline card data inline card 	LOGISTICS_SUGGESTION
+here the complexity is o n so please use hash map and change it to o n . ex isset key can be used here instead of inarray .	REFACTORING_SUGGESTION
+please user string literals from strings .xml instead of hard coding like this .	BUGGYCODE_SUGGESTION
+as discussed e a b fe a c ad c please write a utility function for fetching zones to be used at both places while fetching zones for filters and while fetching zones for widget data .	CODE_SUGGESTION
+can we name just suggestedskus for this query ?	SPELLING_SUGGESTION
+we have not use this component in payments . so we can keep this component here itself . warehousebalancelist call the container i .e . usequeryoutletbalancedata from payments .	CODE_SUGGESTION
+there is no need to create this map	BUGGYCODE_SUGGESTION
+remove this commented line	REFACTORING_SUGGESTION
+its two way if already fulfilled will be like true only na they want to fulfill and its already fulfilled . for others plz do comment .	LOGICAL_SUGGESTION
+ public list string getsupportedfilters return arrays .aslist cities distributor outlet verticals outlet categories e a b fe a c ad c earlier this widget supports filters now only .	CODE_SUGGESTION
+ mcompanysettingsutils .getinitialpasswordreset can be made boolean also please use constants .	BUGGYCODE_SUGGESTION
+what you are trying to do here ? why substring ? this not the right way taking currentoutletid ? note what if tomorrow url changes ! 	BUGGYCODE_SUGGESTION
+rename groupby orderby appropriately and make the changes in a separate pr	SPELLING_SUGGESTION
+please import it with top imports like after line no . default imports	CODE_SUGGESTION
+please use the existing object mapper .	CODE_SUGGESTION
+why is this secondary ?	QUESTIONING
+i think we will have to handle the projection part in subqueries as well . i will try it on my local later for this change	BUGGYCODE_SUGGESTION
+space after ! 	REFACTORING_SUGGESTION
+here we can create two queries for approval so it will reduce the space	REFACTORING_SUGGESTION
+remove commented lines	REFACTORING_SUGGESTION
+ e a b fe a c ad c ok . if it is not being used in when then after all projections implementation . please remove it .	REFACTORING_SUGGESTION
+please get it verified and update pr .	COMPLETENESS_SUGGESTION
+please remove extra unnecessary line each tab uses bytes	REFACTORING_SUGGESTION
+please change to development branch .	LOGISTICS_SUGGESTION
+where is typography being used ?	QUESTIONING
+in my opinion it is correct by default inventory should check dats why he assigned 	LOGICAL_SUGGESTION
+camelcasing	SPELLING_SUGGESTION
+please give us the query .	COMPLETENESS_SUGGESTION
+does arr .reduce is required here ? const handlechangejoin index updatedjoin const updatejoins joins .map join i i index ? updatedjoin join onchangejoins . . .updatejoins 	CODE_SUGGESTION
+resolve conflict	LOGISTICS_SUGGESTION
+remove commented lines .	REFACTORING_SUGGESTION
+can remove the below comments	REFACTORING_SUGGESTION
+i had told you to add a bypass in the app context filter . you dont need a if check here .	BUGGYCODE_SUGGESTION
+ f ea d fb a f c do you understand the reduce syntax ? what are the values in it ? did you not use the mdn documentation for array reduce ?	CODE_SUGGESTION
+make one loop to set what kind data you want for below its doing again . set combine .	BUGGYCODE_SUGGESTION
+this much gap . . why ?	QUESTIONING
+space after and before for current and following lines .	REFACTORING_SUGGESTION
+can we delete this commented lines as they are not being used any more .	REFACTORING_SUGGESTION
+logic seems extra stuff first we are getting complete list then position then again from position we are getting warehouse then getting warehouse name instead we should directly get warehouse name from warehouse id .	LOGICAL_SUGGESTION
+why ?	QUESTIONING
+correct the indendation	REFACTORING_SUGGESTION
+default value should be null	CODE_SUGGESTION
+get this flag from activity intent instead of shared pref will be less confusing .	CODE_SUGGESTION
+reformat the code .	REFACTORING_SUGGESTION
+i feel this is a bad way of checking whether an error is present because i see too many string value . a simpler way would be to do it boolean style	BUGGYCODE_SUGGESTION
+use constants for string literals like dialog instead of hard coding . check if this literal is already available in any constants files .	BUGGYCODE_SUGGESTION
+please resolve the conflict .	LOGISTICS_SUGGESTION
+ fb f df c f e a b fe a c ad c f ea d fb a f c do we need ternary operator here ? isshowingrawdata selections .length ? true false point down isshowingrawdata selections .length condition itself returning the result .	CODE_SUGGESTION
+why the span is required ?	QUESTIONING
+please write a foriegn key reference to the dashboard types table	COMPLETENESS_SUGGESTION
+use string literals from strings .xml 	BUGGYCODE_SUGGESTION
+is this apk tested seperatly ? ? ?	QUESTIONING
+can we check what was the group id set for those elements in the form . this can be due to wrong config of the group elements as well .	BUGGYCODE_SUGGESTION
+since we are saving data into associated tables can we make use of sql transactions to avoid any errors which can lead to irregularity in the data ?	CODE_SUGGESTION
+check the length of this output once if we get multiple sms reports	COMPLETENESS_SUGGESTION
+camelcase please	SPELLING_SUGGESTION
+can you please use showtoast which is available in baseactivity ?	REUSE_SUGGESTION
+this might break backward compatibility . would suggest to keep it boolean 	BUGGYCODE_SUGGESTION
+ margintop spacing how this is even working . did you tested what happed when pass spacing as string . ffc ed dbf da ae 	BUGGYCODE_SUGGESTION
+please update pr once verified will merge it . 	COMPLETENESS_SUGGESTION
+most of the things already available in helper function but also you are doing those calculation again in template . please check once and remove unwanted calculations also remove unused variables and code	REFACTORING_SUGGESTION
+ d acaf d bc this is not what i had suggested . please check the part where you add the widgettypes id . i m saying the similar query should be present in companyid if possible and submoduleid definitely possible 	BUGGYCODE_SUGGESTION
+can t we use divider props in listitem to get the divider effect ? 	CODE_SUGGESTION
+use constant for number 	BUGGYCODE_SUGGESTION
+is db version updated already ? ? ?	QUESTIONING
+why cant have use helper functions	BUGGYCODE_SUGGESTION
+ fetchpolicy cache and network 	CODE_SUGGESTION
+use space after comma use space before and after 	REFACTORING_SUGGESTION
+this is required . because this change is causing a bug we should deduct only non saleable return as replacement .	BUGGYCODE_SUGGESTION
+add more test case when you add this in main class override public conditionselectortype selectortype return none override public integer numplaceholders return 	CODE_SUGGESTION
+spaces after and space after and space before 	REFACTORING_SUGGESTION
+would it be better to use the the fileuploadresponse object here itself instead of conversion to map and then to the domain model ? any specific reason to use map ?	CODE_SUGGESTION
+can we give some name to ?	BUGGYCODE_SUGGESTION
+convert all indentations to tabs alternative tabs and spaces used .	REFACTORING_SUGGESTION
+can we optimize and use updateall 	LOGICAL_SUGGESTION
+read the setting at the start of the function and make it user based .	CODE_SUGGESTION
+remove if not required	REFACTORING_SUGGESTION
+is the full stop required ?	QUESTIONING
+you can use classname classes .dialogcontent don t put it on the root component as this is a specific change	CODE_SUGGESTION
+don t we need to update the db version as a new column adding here ? please check .	BUGGYCODE_SUGGESTION
+ will not help in string concatenation here you have to use the . in log statements it will work	BUGGYCODE_SUGGESTION
+write variable name in camelcase like skunitidsaftervisibility	SPELLING_SUGGESTION
+please correct spelling getbackuppaymentcommentreason	SPELLING_SUGGESTION
+use tag as hard coded string instead of using makelogtag method .	CODE_SUGGESTION
+indentation issue please fix	REFACTORING_SUGGESTION
+please check this pr branch was merged in other pr .	LOGISTICS_SUGGESTION
+we need to preserve all old dat hard delete is not a good practise .	BUGGYCODE_SUGGESTION
+what was the issue with this ?	QUESTIONING
+this is moved to somewhere else ? please check once .	COMPLETENESS_SUGGESTION
+so the entire message with attachments is sent as a string ? not a multipart form data ?	BUGGYCODE_SUGGESTION
+if you remove this condition it will get whole data of company that will create problem for larger db s . always fatch the data base on condition . i am not sure why you are fatching the data . please elobrate more .	REFACTORING_SUGGESTION
+is this required ?	QUESTIONING
+the is a comman funcation please use that .	REUSE_SUGGESTION
+check indentation the starting and ending level dont match .	REFACTORING_SUGGESTION
+why delta value is hardcoded ?	BUGGYCODE_SUGGESTION
+ a e a f b e d d ed e not able to chick the order card . so can t go to order details page . please check this issue .	BUGGYCODE_SUGGESTION
+please add default values .	BUGGYCODE_SUGGESTION
+ f ea d fb a f c if done why we have kept input in styles ?	BUGGYCODE_SUGGESTION
+this might lead to a huge data set and the query might fail . please finalise a date limit and make necessary changes .	BUGGYCODE_SUGGESTION
+ abb bdc c bd a fff a cool . . then we can marge it	LOGISTICS_SUGGESTION
+fields added with data are double quoted can we double quote this as well ?	CODE_SUGGESTION
+use a fall back like the line below .	CODE_SUGGESTION
+this will return but the function of redirect and other response type . please check .	BUGGYCODE_SUGGESTION
+add correct bracket for multiplication .	BUGGYCODE_SUGGESTION
+verified ticket 	LOGISTICS_SUGGESTION
+all if and foreach statements indentation should be corrected .	REFACTORING_SUGGESTION
+please be aware that this response is cached .	LOGICAL_SUGGESTION
+controller gets only strings why are we using array ?	BUGGYCODE_SUGGESTION
+if the sku is null or sku .status is null this will fail here itself	BUGGYCODE_SUGGESTION
+ f ea d fb a f c need to rename this file as usequerytables .js 	REFACTORING_SUGGESTION
+do we need set combine twice here ?	CODE_SUGGESTION
+please get it verified and update pr .	COMPLETENESS_SUGGESTION
+please user string literals from strings .xml instead of hard coding like this .	BUGGYCODE_SUGGESTION
+syntax error .	BUGGYCODE_SUGGESTION
+beatdetail bdbeatid index beat primary outlet primary all joins index is being used .	LOGICAL_SUGGESTION
+merging this as this is just a type casting of the values to integer in pjpoutlet value .	LOGISTICS_SUGGESTION
+we can use a const value here	BUGGYCODE_SUGGESTION
+remove commented line	REFACTORING_SUGGESTION
+bro please add them after back merge else code will be there but revision wouldnt be there .	LOGISTICS_SUGGESTION
+we should put these constants at some common place and use it here and in dataconfig of continousreplinshment widget .	BUGGYCODE_SUGGESTION
+wrongly committed please revert to old line . 	LOGISTICS_SUGGESTION
+reformat the code .	REFACTORING_SUGGESTION
+we will not do this !	BUGGYCODE_SUGGESTION
+please move this to some utility class as this will be used by other widgets too .	CODE_SUGGESTION
+will it help if we return non null value ?	QUESTIONING
+need demo .	COMPLETENESS_SUGGESTION
+ e a b fe a c ad c so this issue still exists 	BUGGYCODE_SUGGESTION

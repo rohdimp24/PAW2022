@@ -1,0 +1,418 @@
+### the script contains the common functions that will be used to prepare the data for similarity calculations
+import nltk
+import numpy as np
+from nltk.corpus import stopwords
+from nltk.tokenize import WordPunctTokenizer
+from nltk.stem.porter import PorterStemmer
+import gensim, logging
+import re
+import pickle
+import scipy as sp
+import numpy as np
+from sklearn.decomposition import PCA
+from sklearn.metrics.pairwise import cosine_similarity
+import matplotlib.pyplot as plt
+import json
+import mysql.connector
+from sklearn.manifold import TSNE
+from nltk import word_tokenize
+from nltk.util import ngrams
+from Utility import ccdUtilities as cu
+import math
+import pandas as pd
+from Utility import commonUtilities as comU
+
+
+
+
+#### Following are the word2vec similarty fucntions
+
+def w2v_prepareForGensimTrainingModel(lines):
+    lstSentences=[]
+    for i in range(len(lines)):
+        sentence=lines[i]
+        sentence = sentence.replace('<SUBJECT>',' ')
+        sentence = sentence.replace('<DESC>',' ')
+        lstSentences.append(sentence.split(' '))
+    return lstSentences
+
+
+##function will train the word2vec model
+def w2v_trainW2VModel(lines,NUM_EPOCHS=100):
+    lstSentences=w2v_prepareForGensimTrainingModel(lines)
+    model = gensim.models.Word2Vec(lstSentences, min_count=5, size=300, sg=1, hs=1,workers=4)
+    model.build_vocab(lstSentences, update = True)
+    MODEL_NAME="word2vec_bizom_300_desc_"
+    numEpochs=NUM_EPOCHS
+    for epoch in range(numEpochs):
+        try:
+            print('epoch %d'%(epoch))
+            if(epoch%10==0):
+                model.save('bizomW2VModels/'+MODEL_NAME+str(epoch)+'.model')
+            model.train(lstSentences, total_examples=model.corpus_count, epochs=10)
+            #model.train(sentences, total_examples=model.corpus_count, epochs=model.iter) 
+        except(KeyboardInterrupt,SystemExit):
+            break
+
+
+def w2v_getWordVectors(lines,word2vecModel):
+    wordVectors=[]
+    missedIds=[]
+    
+    for i in range(0,len(lines)): 
+            #print("ROW",row)
+        subjectLine=lines[i]
+        tokenizedString=nltk.word_tokenize(subjectLine)
+        tokens_without_sw=tokenizedString
+        res=list(set(tokens_without_sw))
+
+        #label=df_rawTraining.iloc[i,1]
+        lstRes=[]
+        for token in res:
+            try:
+                tokenvec=word2vecModel.wv[token]
+                lstRes.append(tokenvec)
+            except KeyError as e:
+                print(e)
+                #do nothing
+        wordVector=np.mean(lstRes,axis=0).tolist()
+        if(type(wordVector)) is list:
+            wordVectors.append(wordVector)
+        else:
+            print("nan found at",i,res)
+            missedIds.append(i)
+            
+    return wordVectors,missedIds
+
+
+##General Functions
+def getCCDData():
+    sqlCompany="SELECT companyId,uid,CCDTickets3.ticketId as ticketId,ticket_case_mapping.uid,subject,subCategory FROM `CCDTickets3` " \
+        "left join ticket_case_mapping on ticket_case_mapping.ticketId=CCDTickets3.ticketId where CCDTickets3.ticketId>87000"
+    dfTicketDetails=cu.generalDBquery(sqlCompany)
+    dfTicketDetails=dfTicketDetails.dropna()
+    dfTicketDetails['ticketId']=dfTicketDetails['ticketId'].astype(int)
+    return dfTicketDetails
+
+
+def getCaseDescriptions(casesFilename='ZohoCaseDescData6',seperator="<ROHIT>"):
+    dfCases=pd.read_csv(casesFilename,sep=seperator,header=None)
+    dfCases.columns=['filename','ticketIdPath','caseDesc']
+    dfCases=dfCases.dropna()
+    dfCases.reset_index(inplace=True)
+    dfCases.head()
+    
+    ## add the ticket id
+    dfCases['ticketId']=dfCases['ticketIdPath'].apply(lambda x:str(x).split('/')[1])
+    dfCases['ticketId']=dfCases['ticketId'].astype(int)
+    
+    ##get the other data rfrom the main datanase
+    dfTicketDetails=getCCDData()
+    mergedCases=pd.merge(dfCases,dfTicketDetails,how="left",on="ticketId")
+    return mergedCases
+
+
+
+
+###POS Related functions
+def removeNonPOSWords(text,allowedWords):
+    text = ' '.join([getWordReplacement(word) for word in text.split() if word in allowedWords])
+    return text
+
+def getWordReplacement(word):
+    returnWord=word
+    try:
+        returnWord=dfPOSTags[dfPOSTags['word']==word]['correctedWord'].values[0]
+    except:
+        print("word not found",returnWord)
+        returnWord="<NF>"+word+"</NF>"
+    return returnWord
+
+
+
+def checkPresence(pattern,hay):
+    pos=hay.find(pattern)
+    return pos
+
+
+def removePunctuations(rawText):
+    case=rawText
+    case = case.strip();
+    case = case.replace('"', ' ')
+    case = case.replace('\"', ' ')
+    case = case.replace('>', ' ')
+    case = case.replace('@', ' ')
+    case = case.replace('<', ' ')
+    case = case.replace(':', ' ')
+    case = case.replace('.', ' ')
+    case = case.replace('(', ' ')
+    case = case.replace(')', ' ')
+    case = case.replace('[', ' ')
+    case = case.replace(']', ' ')
+    case = case.replace('_', ' ')
+    case = case.replace(',', ' ')
+    case = case.replace('#', ' ')
+    case = case.replace('-', ' ')
+    case = case.replace('/', ' ')
+    case = case.replace('"', ' ')
+    case = case.replace('\n', ' ')
+    case = case.replace('\r', ' ')
+    case = case.replace('~', ' ')
+    case = case.replace('%', ' ')
+    case = case.replace('$', ' ')
+    case = case.replace('&', ' ')
+    case = case.replace('!', ' ')
+    case = case.replace('*', ' ')
+    case = case.replace('+', ' ')
+    case = case.replace('?', ' ')
+    case = case.replace(';', ' ')
+    case = case.replace('_', ' ')
+    case = case.replace('\'', ' ')
+    return case
+
+## this function will remove the pattern from the input text ..useful to remove 
+## som of the useless discliamer messages from the text
+def filterText(checkStopWord,inputText):
+    if(checkPresence(checkStopWord,inputText)>-1):
+        pos=checkPresence(checkStopWord,inputText)
+        return inputText[0:pos]
+    else:
+        return inputText
+
+
+###
+## main function to remove the nonPOs words..
+## before removing the words it will remove the disalcianer thing as well
+
+###
+def helperApplyFilters(text,allowedWords):
+    #remove the disclaimer information if any
+    originalText=text
+    text=filterText("disclaimer",text)
+    text=removeNonPOSWords(text,allowedWords)
+    if(len(text.split(' '))<2):
+        print(text,"..Too small")
+        return removePunctuations(originalText)
+    else:
+        return text
+
+
+
+
+####Vectorization functions
+def getDataReadyForVectorization(dfCasesSubset):
+    lines = []
+    countToCaseIdMap={}
+    subjects={}
+    companyToCaseIdMap={}
+    subCategoryToCaseIdMap={}
+    # # maximum is 4997
+    count=0
+    for i in range(dfCasesSubset.shape[0]):
+        lines.append(dfCasesSubset.iloc[i]['POSCaseDesc'])  # now we need to vectorize the corpus
+        countToCaseIdMap[i]=dfCasesSubset.iloc[i]['ticketId']
+        companyToCaseIdMap[i]=dfCasesSubset.iloc[i]['companyId']    
+        subjects[i]=dfCasesSubset.iloc[i]['subject']
+        subjects[i]=subjects[i].replace('||', ' ')
+        subjects[i]=subjects[i].replace('|/', ' ')
+        subjects[i]=subjects[i].replace('|', ' ')
+        subCategoryToCaseIdMap[i]=dfCasesSubset.iloc[i]['subCategory']  
+    return lines,countToCaseIdMap,subjects,companyToCaseIdMap,subCategoryToCaseIdMap
+
+
+def getAngleInRadian(cos_sim):
+    # This was already calculated on the previous step, so we just use the value
+    angle_in_radians = math.acos(float(cos_sim))
+    return (math.degrees(angle_in_radians))
+
+
+
+
+### function specific to the Ngrams thins..this will return the unigram and bigram
+## the function is useful in case of generating the keywords
+
+def generateNgramsListsNew(lstSentences):
+    domainSpecificStr=''
+    for i in range(0,len(lstSentences)):
+        case=lstSentences[i]
+        case = case.replace('<SUBJECT>',' ')
+        case = case.replace('<DESC>',' ')
+        tokenizedString=nltk.word_tokenize(case)
+        tokens_without_sw=tokenizedString
+        res=list(set(tokens_without_sw))
+        if len(res)==0:
+            res=tokenizedString
+        domainSpecificStr+=' '.join(res)
+        domainSpecificStr+=' ^^ '
+
+    #generate the ngrams
+    domainTokens = nltk.word_tokenize(domainSpecificStr)
+    domain_unigrams=ngrams(domainTokens,1)
+    domain_bigrams = ngrams(domainTokens,2)
+    return domain_unigrams,domain_bigrams
+
+
+def generateWordFrequencies(domain_unigrams,domain_bigrams):
+    threshold=0
+    delimitPattern='^^'
+    finalList={}
+    cntObj=Counter(domain_unigrams)
+    sortedCounterList=cntObj.most_common()
+    for tag, count in sortedCounterList:
+        unigramString=tag[0]
+        if(unigramString.find(delimitPattern) == -1):
+            if(count>threshold):
+                finalList[unigramString]=count
+
+    cntObj=Counter(domain_bigrams)
+    sortedCounterList=cntObj.most_common()
+    for tag, count in sortedCounterList:
+        bigramString=tag[0]+"_"+tag[1]
+        if(bigramString.find(delimitPattern) == -1):
+            if(count>threshold):
+                finalList[bigramString]=count
+    return finalList
+
+
+def getKeywords(lstSentences):
+    domainUnigrams,domainBigrams=generateNgramsListsNew(lstSentences)
+    finalList=generateWordFrequencies(domainUnigrams,domainBigrams)
+    newDict={k: v for k, v in sorted(finalList.items(), key=lambda item: item[1],reverse=True)}
+    count=0
+    lstDict=list(newDict.keys())
+    keys=''
+    if(len(lstDict)>5):
+        count=5
+
+    for i in range(0,count):
+        keys+=lstDict[i]+","
+
+    return keys
+
+
+### function to prepare the data for 
+def getDataReadyForVectorization(dfCasesSubset):
+    lines = []
+    countToCaseIdMap={}
+    subjects={}
+    companyToCaseIdMap={}
+    subCategoryToCaseIdMap={}
+    # # maximum is 4997
+    count=0
+    for i in range(dfCasesSubset.shape[0]):
+        lines.append(dfCasesSubset.iloc[i]['POSCaseDesc'])  # now we need to vectorize the corpus
+        countToCaseIdMap[i]=dfCasesSubset.iloc[i]['ticketId']
+        companyToCaseIdMap[i]=dfCasesSubset.iloc[i]['companyId']    
+        subjects[i]=dfCasesSubset.iloc[i]['subject']
+        subjects[i]=subjects[i].replace('||', ' ')
+        subjects[i]=subjects[i].replace('|/', ' ')
+        subjects[i]=subjects[i].replace('|', ' ')
+        subCategoryToCaseIdMap[i]=dfCasesSubset.iloc[i]['subCategory']  
+    return lines,countToCaseIdMap,subjects,companyToCaseIdMap,subCategoryToCaseIdMap
+
+
+
+def getSimilarityScoreMatrixForCases(lines,matrixType="TFIDF",word2vecModel=''):
+    if(matrixType=="TFIDF"):
+        matrix=getTFIDFVectors(lines)
+    
+    if(matrixType=="W2V"):
+        matrix=w2v_getWordVectors(lines,word2vecModel)
+    sim_scores=cosine_similarity(matrix[lines], matrix[lines])
+    return sim_scores
+
+
+
+### function will generate the vectors for the tfidf
+def getTFIDFVectors(lines):
+    tfidf_vectorizer = TfidfVectorizer(strip_accents='unicode')
+    tfidf_matrix = tfidf_vectorizer.fit_transform(lines)
+
+    tfidf_matrix_dtm = tfidf_matrix.toarray()
+    tfidf_matrix_dtm=np.array(tfidf_matrix_dtm)
+    print(tfidf_matrix.shape)
+    return tfidf_matrix
+
+
+
+###Facade layer
+def parseCases(dfCasesSubset,allowedWords):
+    toBeRemovedIndexes=[]
+    for i in dfCasesSubset.index:
+        ticketId=dfCasesSubset.iloc[i]['ticketId']
+        caseDesc=dfCasesSubset.iloc[i]['caseDesc']
+        subject=dfCasesSubset.iloc[i]['subject']
+        subject=subject.lower()
+        try:
+            posSubject=helperApplyFilters(subject,allowedWords)
+            posCaseDesc=helperApplyFilters(caseDesc,allowedWords)
+            finalText="<SUBJECT>"+" "+posSubject+" "+"<DESC>"+posCaseDesc
+            print("#S=>",subject," #CD=>",caseDesc,"#FIN==>",finalText)
+            dfCasesSubset.loc[i,"POSCaseDesc"]=finalText
+        except:
+            toBeRemovedIndexes.append(i)
+            print(ticketId,"=>",caseDesc,"---","NOT ABLE TO PROCESS")
+
+
+    print(toBeRemovedIndexes)
+    if(len(toBeRemovedIndexes)>0):
+        dfCasesSubset.drop(dfCasesSubset.index[toBeRemovedIndexes],inplace=True)
+        dfCasesSubset.reset_index()
+
+    return dfCasesSubset
+
+
+### this is the facede function that will generate the similiarty scores
+def getRelevantSimilarCases(outputFileName,sim_scores,lines,countToCaseIdMap,subjects,companyToCaseIdMap,subCategoryToCaseIdMap):
+    with open(outputFileName, encoding='utf-8-sig', mode='w') as fp:
+        fp.write('{}|{}|{}|{}|{}|{}|{}|{}|{}\n'.format("originalTicketId","originalPOSDesc","originalSubCategory",
+                                                "originalCompanyId","matchingTicketId","matchingPOSDesc", 
+                                                "matchingSubCategory","matchingCompanyId","similarityAngle"))
+    
+        shortResults={}
+        longResults = {}
+        for i in range(len(lines)):
+            rr = []
+            shortRR=[]
+            print("check for ",i)
+            print("originla", subjects[i],"==",lines[i])
+            for index in comU.which(sim_scores[i]>0.75):
+                print("index",index)
+                ss=sim_scores[i][index]
+                if (ss > 1.0):
+                    ss = 1.0
+                if (ss < -1.0):
+                    ss = -1.0
+                # print(index)
+                # getAngleInRadian(ss)
+                angle = getAngleInRadian(ss)
+                if(angle<60.0):
+
+                    caseId=countToCaseIdMap[index]
+                    #print("matching",ss, angle,caseId,"==>",subjects[index],"==>",lines[index])
+                    rr.append({'originalSubject':subjects[i] ,'orginalCaseId':countToCaseIdMap[i] 
+                            ,'originalCompanyId': companyToCaseIdMap[i],'matchingCaseId': caseId, 
+                            'matchingCompanyId':companyToCaseIdMap[index],'matchingSubject':subjects[index],'cosine': angle,})
+                    fp.write('{}|{}|{}|{}|{}|{}|{}|{}|{}\n'.format(countToCaseIdMap[i],subjects[i],
+                                                                subCategoryToCaseIdMap[i],
+                                                                companyToCaseIdMap[i],
+                                                                caseId,subjects[index],
+                                                                subCategoryToCaseIdMap[index],
+                                                                companyToCaseIdMap[index],angle))
+            longResults[countToCaseIdMap[i]] = rr
+    return "DONE"
+
+
+
+##this is a facade functions for geenrating keywords among the similar cases 
+def generateKeywordsForSimilarCases(outputFileName,sim_scores,lines):
+    with open(outputFileName, encoding='utf-8-sig', mode='w') as fp:
+        lstSentences=[]
+        for j in range(0,sim_scores.shape[0]):
+            for i in comU.which((sim_scores[j]>0.6)):
+                #print(countToCaseIdMap[i],subjects[i],lines[i])
+                lstSentences.append(lines[i])
+            resDict=getKeywords(lstSentences)
+            print(countToCaseIdMap[j],resDict)
+            fp.write('{}|{}\n'.format(countToCaseIdMap[j],resDict))
+    return "DONE"

@@ -1,0 +1,640 @@
+"commentId","prId","commentText","author"
+"253171795","10696","I’ll check today and merge if every thing fine.","Arvind Kandi"
+"253276755","10703","Please add space after the comma to follow the common convention.  
+  
+`$approvalStatus = explode( "","", $_GET['approval_status'] );`","Narasimha Kamath"
+"253350022","10704","In this why fetching orderdetails. This will create overright data of orderdetails.","Arvind Kandi"
+"253350069","10704","same here.","Arvind Kandi"
+"253521772","10704","How can list give multiple fields?","Laxmikanth T D"
+"253867557","10704","@{5b45dfc0441e440653b0aaff} Here There is a unnecessary data being taken in each row of order details,  
+If more than 1 skunit is ordered it’ll overwrite which is wrong,  
+fetch order separately,  
+fetch order details separately.  
+then merge the data to a new array.  
+with loop on orderdetails data.","Laxmikanth T D"
+"253867668","10704","@{5b45dfc0441e440653b0aaff} Here There is a unnecessary data being taken in each row of order details,  
+If more than 1 skunit is ordered it’ll overwrite which is wrong,  
+fetch order separately,  
+fetch order details separately.  
+then merge the data to a new array.  
+with loop on orderdetails data.","Laxmikanth T D"
+"254689006","10704","Data will be overwritten when there is a free SKU provided.","Narasimha Kamath"
+"255541429","10704","The array structure will change here.","Laxmikanth T D"
+"255548556","10704","if'( !isset'( $orderDetailLists'[$detailData'['Orderdetail'']'['order'_id'']']'[$detailData'['Orderdetail'']'['skunit'_id'']'] ') ')'{
+
+	$orderDetailLists'[$detailData'['Orderdetail'']'['order'_id'']']'[$detailData'['Orderdetail'']'['skunit'_id'']'] = array'(');
+
+'}","Laxmikanth T D"
+"253252112","10713","Multiple joins on same table is a costly operation.  
+Can we fetch it separately and build data,  
+Other reviewers please add your views","Laxmikanth T D"
+"253277871","10713","Rename `leadScore1 to opportunityLeadScore`","Kishan Reddy"
+"253537571","10713","Use !empty","Laxmikanth T D"
+"253537669","10713","use !empty || isset","Laxmikanth T D"
+"253537683","10713","use !empty || isset","Laxmikanth T D"
+"253539949","10713","if'( !empty'( $leadsData'['aaData''] ') ')'{","Laxmikanth T D"
+"253540165","10713","if'( !empty'( $value'['OpportunitymappingLeadscoreID''] ') &&  isset'( $value'['OpportunitymappingLeadscoreID'']'[ $leadScores '] ') ')'{","Laxmikanth T D"
+"253540307","10713","if'( !empty'( $value'['leadScoreID''] ') && isset'( $value'['leadScoreID'']'[ $leadScores '] ') ')'{","Laxmikanth T D"
+"253546129","10713","Just a personal preference:  
+  
+'$leadsData'['aaData'']'[$key']'['leadScoreName''] = """";  
+if'( !empty'( $value'['OpportunitymappingLeadscoreID''] ') && isset'( $leadScores'[$value'['OpportunitymappingLeadscoreID'']'] ') ')'{  
+    $leadsData'['aaData'']'[$key']'['leadScoreName''] = $leadScores'[ $value'['OpportunitymappingLeadscoreID''] '];  
+'} else if'( !empty'( $value'['leadScoreID''] ') && isset'( $leadScores'[$value'['leadScoreID'']'] ') ')'{  
+    $leadsData'['aaData'']'[$key']'['leadScoreName''] = $leadScores'[ $value'['leadScoreID''] '];  
+'}
+
+Reduces a lot of nesting of code. Inputs are welcomed.","Narasimha Kamath"
+"253803259","10713","!empty'( $leadsData'['aaData''] ')","Laxmikanth T D"
+"253803346","10713","Use $this->Outlet->Leadscore  
+loadModel is costly operation.","Laxmikanth T D"
+"253815266","10713","Can we use else-if here instead of else and then further nesting inside the block?","Narasimha Kamath"
+"253816020","10713","Since the priority is to be picked from opportunitymappings over outlets, can we use the code like below?  
+  
+if'( !empty'( $value'['OpportunitymappingLeadscoreID''] ') ') '{  
+    $leadScoresIDs'['] = $value'['OpportunitymappingLeadscoreID''];  
+'} else if'( !empty'( $value'['leadScoreID''] ') ') '{  
+    $leadScoresIDs'['] = $value'['leadScoreID''];  
+'}
+
+  
+This will reduce the query conditions in case there are leadscores for both opportunity mapping and the outlet.","Narasimha Kamath"
+"253816789","10713","Can we use findByIDs'(') of Leadscore.php as pass the leadscoreIDs? This will reduce having to write similar SQL queries across the codebase and also help in reduce writing queries in the controller as well. ","Narasimha Kamath"
+"253447591","10719","Can we remove this console.log'(') here?","Narasimha Kamath"
+"253539210","10719","Going in next release, Hence please wait till RQA is moved to RI","Laxmikanth T D"
+"254576361","10719","Please resolve conflict we will merge this today.","Laxmikanth T D"
+"253488541","10723","why this empty php tag?","Laxmikanth T D"
+"253800733","10735","This kind function present in App Controller i think","Arvind Kandi"
+"253823741","10737",,"Laxmikanth T D"
+"253897314","10746","Release version needs to be changed and same to be handled in app as well","Laxmikanth T D"
+"253959387","10752","remove hard code","Arvind Kandi"
+"253959479","10753","y this?","Arvind Kandi"
+"254097656","10762","The Merge of RQA to RI is already done?  
+should this also go to RI ? and sanity?  
+please confirm.","Laxmikanth T D"
+"254112149","10764","rowdata'['foroutlet'_id''] will have warehouseid or outletid?","Dharshan Kumar"
+"254149335","10764","Every time in the for-each loop, this line will add more keys to the array, so for 100th row, it will contain SKU IDs and batch IDs of previous 99 rows as well. Is this the intended behaviour?","Narasimha Kamath"
+"254150086","10764","Can above batchId assignment be done like below -  
+'$batchId = 0;   
+if'( !empty'( $rowData'['batch'_id''] ') ') '{   
+   $batchId = $rowData'['batch'_id''];   
+'}  
+  
+It will avoid re-assigning if batch'_id is already 0 in excel","Kishan Reddy"
+"254313152","10764","@{5f7f0ac858899e0070b294c7} Please create a key like <skunitid>'_<batchid>  
+add all the quantities and call the function checkAvaiInventory in the last so that whole file inventory can be checked.","Laxmikanth T D"
+"254313566","10764","if '( !isset'( $checkInventory'[<skunitid>'_<batchid>'] ') ') '{
+
+''$checkInventory'[<skunitid>'_<batchid>'] = array'( ‘quantity' => 0, ‘rowIds’ => array'(') ');
+
+'}
+
+''$checkInventory'[<skunitid>'_<batchid>']'[’quantity''] '+= $returnQty;
+
+''$checkInventory'[<skunitid>'_<batchid>']'[’rowIds'']'['] = $rowId;  
+rowIds can be used to populate the errors on those specific rows. whose quantity do not have inventory for.","Laxmikanth T D"
+"254577193","10764","Here we are validating only first entry only and not all combination of skunit and batch.","Laxmikanth T D"
+"254582118","10764","Also please remove the commented line.","Narasimha Kamath"
+"255252272","10764","indentation","Dharshan Kumar"
+"255439039","10764","Please get it Verified and update pr for merge.","Laxmikanth T D"
+"254136361","10765","donot use hard coded domain names here.","Laxmikanth T D"
+"254577740","10774","is gmail'_id column needed?
+
+This is used to link the user to a gmail account.","Laxmikanth T D"
+"254386514","10775","there is no created index on payments table.","Dharshan Kumar"
+"254682154","10775","@{557058:675feee4-a092-4b20-8227-9054d59e5f01} Can we add the index on created","Dharshan Kumar"
+"255173175","10775","Please change this to dev branch / get the index executed on all live companies then we can merge the same.","Laxmikanth T D"
+"254418843","10776","padding-left is not needed here I think since it has no value. you can remove it.","Kishan Reddy"
+"254384701","10777","hold this one","Bhupendra Pandey"
+"254590335","10780","merge this asap","Bhupendra Pandey"
+"254647983","10781","Did we checked this.","Arvind Kandi"
+"255436993","10781","add  tab alignment","Arvind Kandi"
+"254685090","10784","Please use isset.","Laxmikanth T D"
+"254685161","10784","please use isset.","Laxmikanth T D"
+"255268699","10798","INSERT IGNORE INTO","Laxmikanth T D"
+"255268776","10798","please make all query re-executable","Laxmikanth T D"
+"255275189","10798","Why is the time hard coded as 8PM? Technically it should be disabled by default to maintain backward compatibility, right?","Narasimha Kamath"
+"255542517","10821","Can we use !empty here?","Laxmikanth T D"
+"255542526","10821","Can we use !empty here?","Laxmikanth T D"
+"255526275","10822","I think it will need change here as well because every time it will flow inside if block","Narasimha Kamath"
+"255526324","10822","Same here.","Narasimha Kamath"
+"255712039","10833","Here we loose the key and the data also.
+
+The key should be present with the data as a empty string ''
+
+There is a data which needs to be captured but the user didn't enter anything.
+
+So this should be shown.
+
+Please make changes in the place that this is needed.
+
+The current code might delete the key as the data is null, which shouldn’t be the actual behaviour.","Laxmikanth T D"
+"255821440","10833","handle it with both conditions key and value not present then only remove it from array","Dharshan Kumar"
+"255723433","10835","use space after comma","Bhupendra Pandey"
+"255723476","10835","use space before and after =>","Bhupendra Pandey"
+"255723517","10835","use space after comma","Bhupendra Pandey"
+"255735653","10835","use space after comma","Bhupendra Pandey"
+"255819843","10836","Please keep a log of this in logs table.","Laxmikanth T D"
+"255820484","10836","What about the data in stocktransferdetails table?","Laxmikanth T D"
+"256020769","10836","Please set  the data in response, do not reinitialize the $response variable.  
+set a value in reason in default response.","Laxmikanth T D"
+"256020998","10836","Please set the data in response, do not reinitialize the $response variable.  
+set a value in reason in default response.","Laxmikanth T D"
+"255820843","10838","Is the testing completed for this?  
+[https://bugzilla.bizom.in/show'_bug.cgi?id=18518](https://bugzilla.bizom.in/show_bug.cgi?id=18518)","Narasimha Kamath"
+"255821194","10838","Please make the query re-executable.","Narasimha Kamath"
+"255822152","10838","We have UI alias for BATCHES, can we use that instead of hardcoding?","Narasimha Kamath"
+"255990965","10838","please use brackets even if it’s single line code.","Laxmikanth T D"
+"255991087","10838","Can we add the brackets to mark this if block?","Narasimha Kamath"
+"255991174","10838","please add space before and after =>","Laxmikanth T D"
+"255991198","10838","please add space before and after =>","Laxmikanth T D"
+"255991225","10838","Please add space after the comma.","Narasimha Kamath"
+"255991226","10838","check alignment.","Laxmikanth T D"
+"255991253","10838","brackets for if","Laxmikanth T D"
+"255991261","10838","brackets for if","Laxmikanth T D"
+"255991320","10838","Please add brackets to mark the if block.","Narasimha Kamath"
+"255991336","10838","Space after ,","Laxmikanth T D"
+"255991345","10838","space after ,","Laxmikanth T D"
+"255991361","10838","Please add space after the comma. And a space after the '( ","Narasimha Kamath"
+"255991434","10838","brackets for if","Laxmikanth T D"
+"255991449","10838","Please add space before and after =>","Narasimha Kamath"
+"255991459","10838","correct alignment.","Laxmikanth T D"
+"255991478","10838","Please add space before and after =>","Narasimha Kamath"
+"255991485","10838","correct alingment","Laxmikanth T D"
+"255991537","10838","Please add brackets for the if block.","Narasimha Kamath"
+"255991554","10838","Please add brackets for the if block.
+
+‌","Narasimha Kamath"
+"255991565","10838","donot qury in loop.","Laxmikanth T D"
+"255991639","10838","spacing for => and ,","Laxmikanth T D"
+"255991698","10838","spacing => and , and after '(","Laxmikanth T D"
+"255991829","10838","remove commented code.","Laxmikanth T D"
+"255991903","10838","Is it possible to user $batchId here instead of $current'['Loadout'']'['batch'_id'']?","Narasimha Kamath"
+"255991989","10838","Please use space before and after =>","Narasimha Kamath"
+"255992846","10838","Can we use Tipped.create'('#batch'_detail'_''+skuheaderKey'+'', batchDetails'); in then function,  
+we can also do it with class i believe please test the same,","Laxmikanth T D"
+"255992955","10838","brackets for if and else.","Laxmikanth T D"
+"255993759","10838","Please follow a consistent pattern,  
+if'(<space>condition<space>')  
+they are random here.","Laxmikanth T D"
+"255994075","10838","space after , space before and after =>, and space after '( and before ') for if and other places where it is being used.","Laxmikanth T D"
+"256018728","10838","space after ,","Laxmikanth T D"
+"256018787","10838","space after ,","Laxmikanth T D"
+"257261098","10838","Can we use isset'(') here?","Narasimha Kamath"
+"257271061","10838","SHouldn’t we use a separator for name and batch name ' - '","Laxmikanth T D"
+"257271527","10838","Correct alignment for this set of query.","Laxmikanth T D"
+"257271779","10838","add space before and after => and after '(","Laxmikanth T D"
+"257271803","10838","add space before and after => and after '(","Laxmikanth T D"
+"257271853","10838","add space before and after => and after '( and after ,","Laxmikanth T D"
+"257272019","10838","add space before and after => and after '(","Laxmikanth T D"
+"257272041","10838","add space before and after => and after '(","Laxmikanth T D"
+"257272276","10838","add space before and after => and after '( and ,","Laxmikanth T D"
+"257272382","10838","add space before and after => and after '(  
+and move condition to next line.","Laxmikanth T D"
+"257272464","10838","add space before and after => and after '( and ,","Laxmikanth T D"
+"257272494","10838","add space before and after => and after '( and ,","Laxmikanth T D"
+"257272547","10838","add space before and after => and after '( and ,","Laxmikanth T D"
+"257272753","10838","add space before and after => and after '(","Laxmikanth T D"
+"257272916","10838","align this code as this is inside foreach,  
+add space before and after =","Laxmikanth T D"
+"257301365","10838","Query is used inside an for loop","Dharshan Kumar"
+"257304054","10838","query is used in loop
+
+‌","Dharshan Kumar"
+"257304242","10838","List out the id and query it.","Dharshan Kumar"
+"257327749","10838","In this batch we have skunit wise only. Fetching all data not good.","Arvind Kandi"
+"257329067","10838","Not fetch all data of batch data.","Arvind Kandi"
+"257329893","10838","Same here. Batch data should be fetched on skunits.","Arvind Kandi"
+"257330101","10838","same here batch fetching in loop.","Arvind Kandi"
+"257330827","10838","Why last month removed  this code.","Arvind Kandi"
+"257432844","10838","Do set combine and use isset to match the batch'_id","Dharshan Kumar"
+"257432884","10838","add the batch'_id as well","Dharshan Kumar"
+"257433299","10838","where is this variable used skuUnitIds?","Laxmikanth T D"
+"257445374","10838","@{60ec20cef749c40068dfe7c7} Please also add the batch'_id condition as you already know which all skunits and which all batch id’s you need.","Laxmikanth T D"
+"255819131","10841","Please get it verified and update pr for merge.","Laxmikanth T D"
+"255998017","10841","Hi Laxmikanth, this is internal dig project changes, qa is no involved in this
+
+We have checked, it is working fine, please merge it","Pooja Chowti"
+"255818886","10845","Why has this been removed ?  
+is the password complexity setting working as expected ?","Laxmikanth T D"
+"255989585","10846","Can we load the model here once we can avoid duplicate lines of code.","Laxmikanth T D"
+"256006014","10846","As mutually discussed this is on demand load loading it always is also a problem and same if condition will also be repeated which is unnecessary.  
+Approving this. ","Laxmikanth T D"
+"255990060","10847","does Stocktransfer have created index?","Laxmikanth T D"
+"255990104","10847","correct indentation.","Laxmikanth T D"
+"255994717","10847",,"Laxmikanth T D"
+"256006972","10847","If we changing the logic of fetching data. Is this communicate accross the mobisy for connect users. As this will not fetch data  as previous logic and new logic are different.","Arvind Kandi"
+"255988307","10849","Is the label supposed to be FSSIA or FSSAI? Please check.","Narasimha Kamath"
+"257159494","10857","can we use isset?","Laxmikanth T D"
+"257220107","10857","[https://gist.github.com/alcaeus/536156663fac96744eba77b3e133e50a](https://gist.github.com/alcaeus/536156663fac96744eba77b3e133e50a){: data-inline-card='' }   
+[https://ilia.ws/archives/247-Performance-Analysis-of-isset-vs-array_key_exists.html](https://ilia.ws/archives/247-Performance-Analysis-of-isset-vs-array_key_exists.html){: data-inline-card='' }   
+isset is faster.","Laxmikanth T D"
+"256084518","10860","by default you can assign this
+
+like
+
+`tmp['mfg'] = '0000-00-00';`
+
+```
+if(paymentDetail['Batch']['manufacture_date'] != null){
+		tmp['mfg'] = paymentDetail['Batch']['manufacture_date'];
+			}
+```
+
+instead of doing in else , same for expiry'_date","Pooja Chowti"
+"256263337","10861","Please make the query re-executable using IGNORE.","Narasimha Kamath"
+"256263730","10861","Will also suggest providing the date fields since it will save as 0000-00-00 00:00:00","Narasimha Kamath"
+"256883818","10861","if add outlet is there then use same flows for edit.","Arvind Kandi"
+"257151601","10861","@{60e3fd52f90dee00693de3d8} , Please check with QA then update its need to QA first. Or we can merge.","Arvind Kandi"
+"257691299","10861","please add created and modified date.","Laxmikanth T D"
+"256261883","10862","We already have a validation below the query where we are checking `if( $oldPaymentData['Payment']['isactive'] != 1 ){` right? So will this make any difference?","Narasimha Kamath"
+"256286676","10862","@{5f7f0ac858899e0070b294c7} plz add backward compatibility with other source. Plz check with Darshan","Arvind Kandi"
+"256617946","10862","Verified: [https://projects.zoho.in/portal/mobisy#taskdetail/15779000000490840/15779000000499001/15779000001931301](https://projects.zoho.in/portal/mobisy#taskdetail/15779000000490840/15779000000499001/15779000001931301)","Dharshan Kumar"
+"256696877","10869","remove console.","Arvind Kandi"
+"256881635","10870","get it verified","Dharshan Kumar"
+"257691347","10870","Any update about testing?","Laxmikanth T D"
+"257694430","10870","Planned for today","Dharshan Kumar"
+"258278465","10870","Please merge if the testing is completed.","Laxmikanth T D"
+"258278732","10870","What if the erp id sent is not present in system,  
+sent data is ab,cd,ef,gh,
+
+but system has only ab,cd,gh  
+the skunit with erp “ef” is missing.
+
+the scheme will get created for 3 skunits only.  
+which might be wrong.","Laxmikanth T D"
+"256697407","10874","same here.","Arvind Kandi"
+"256697447","10874","same here.","Arvind Kandi"
+"256881546","10874","Keep on hold once verifies then merge it.","Dharshan Kumar"
+"256647411","10879","Remove console","Pooja Chowti"
+"256647803","10879","please remove decimal points calculation logic
+
+‌","Pooja Chowti"
+"256647840","10879","please remove decimal points calculation logic","Pooja Chowti"
+"256705537","10883","Make this line correct","Dharshan Kumar"
+"256885287","10886","Can we remove 2 tabs from this and the next line?","Narasimha Kamath"
+"256886321","10886","Can we check this with the latest master code? I believer we have already added the key for outlet contact name in [https://bitbucket.org/bizom/bizomweb2/pull-requests/10872/templates-662](https://bitbucket.org/bizom/bizomweb2/pull-requests/10872/templates-662){: data-inline-card='' } . Please check it internally if this code is required.","Narasimha Kamath"
+"256889504","10886","its should fetch directly. in extrafields table and outlet contact.","Arvind Kandi"
+"256894969","10886","We will be reverting this code and keep this branch changes only for model function.","Dharshan Kumar"
+"256896905","10886","Model function is also almost similar, fetching the outlet contact name.","Narasimha Kamath"
+"256911067","10886","[https://bitbucket.org/bizom/bizomweb2/pull-requests/10887](https://bitbucket.org/bizom/bizomweb2/pull-requests/10887){: data-inline-card='' }  
+
+Reverted code from master here
+
+‌","Pooja Chowti"
+"256997981","10902",,"Dharshan Kumar"
+"257172720","10902","correct indentation here","Laxmikanth T D"
+"257173347","10902","We have added a new column of actual price, we now store data for purchased and free skunits.
+
+we shouldn't do a query to fetch the old data.
+
+‌","Laxmikanth T D"
+"257145887","10903","Can we remove this code in that case?","Narasimha Kamath"
+"257339158","10903","Can we comfirm the from outlet and to outlet while updating?
+
+Bcz with any random id I can send any new data..
+
+We need to limit the data set that can be updated once Inserted","Laxmikanth T D"
+"257151985","10905","@Darshan, Please check the qps scheme amount calculation. Its not added in amountBeforeSchDis etc.","Arvind Kandi"
+"257230915","10909","Please test it with many examples
+
+‌","Dharshan Kumar"
+"257337423","10912","Can we use exploded and pop function here.
+
+As data is variable this occurences can increase and it'll be difficult to fix for each data occurence of the splitting word.","Laxmikanth T D"
+"257449718","10912","`$valuesExploded = explode( "" - "", $cellValue, 2 )` I think 2 will do that only ","Praveen Kulkarni"
+"257338320","10913","Correct alignment","Laxmikanth T D"
+"257256869","10915","if userid and fordate will come empty then what will happen?
+
+‌
+
+have you tested code? definately no","Bhupendra Pandey"
+"257256910","10915","data on null will lead to 1970-01-01 is it expected behaviour ?","Laxmikanth T D"
+"257466932","10921","@{5abb6bcbc066052aa9d59893} , can you check this its removed duplicate check in outlets. If its in UI its same we doing or not.","Arvind Kandi"
+"257511111","10923","`why totalcallssecondary` is added and subtracted ?","Pooja Chowti"
+"257692611","10930","is not mapped with the state.","Laxmikanth T D"
+"257801610","10937","array'_values","Dharshan Kumar"
+"258277450","10942","Change array key exists to isset","Laxmikanth T D"
+"258279823","10942","there are 7 entity levels,  
+Can we create the variables and assign the id in it and fetch the data at one shot.  
+both to and from level can be added in same variables.  
+7 times query will be the max. at any given day.","Laxmikanth T D"
+"258286525","10942","As checked through the code $fromLevelEntities already holds all the entities that it’s valid for.","Laxmikanth T D"
+"258286562","10942","As checked through the code $toLevelEntities already holds all the entities that it’s valid for.","Laxmikanth T D"
+"258538093","10944","Just wanted to know if this is an existing MDM or a new MDM that is being created here.","Narasimha Kamath"
+"258808228","10944","This is a new mdm Bro,  
+Here we are forcefully setting the readonly to 1 and showoverride = 0.  
+only GCPL will enable it as they need it.","Laxmikanth T D"
+"258811384","10944","@{5abb6bdc18c3bd2a73fff26a} In that case, we can do the same in the MDM revision file instead of a separate SQL query, right?","Narasimha Kamath"
+"258812046","10944","@{5b8d289dbe73352b233bbcc6} Yeah bro we can check that,  
+@{5abb6bcbc066052aa9d59893} Bhai can you please check if the same can be done through the MDM revision file.","Laxmikanth T D"
+"258353547","10947","Remove new line after closer.","Arvind Kandi"
+"258808919","10947","applyDiscountToSaleFromConnect  
+applyGSTToSaleFromConnect
+
+both extract skunit and fetch data from skunits.
+
+can we get all data before these functions are called and pass on the result set to each function to use them,
+
+this will reduce dual extract and dual query","Laxmikanth T D"
+"258421908","10948","make it re-executable.","Laxmikanth T D"
+"258468880","10948","Attendance.fordate has datetime as datatype so please check condition  ","Praveen Kulkarni"
+"258470274","10948","We get get last day of the any month from date'(""Y-m-t"", strtotime'(date'(`$year.'-'.$toMonth.'-01' `')')')","Praveen Kulkarni"
+"258532794","10948","Can we also add foreign key on designation'_id, and hence keep the value as NULL in this scenario?","Narasimha Kamath"
+"258535484","10948","Can we make use of /designations/getDesignations? It fetches the same data as well.","Narasimha Kamath"
+"258537158","10948","Can we keep the alias as Userworkflow instead of userworkflow '(case sensitivity') and maintain the convention used here?","Narasimha Kamath"
+"258537188","10948","Here as well.","Narasimha Kamath"
+"258539134","10948","Will it also be same year or different year ?","Laxmikanth T D"
+"258560051","10948","@{60dea9b42a1e950069e3c0fe} Done","Praveen Kulkarni"
+"258807874","10948","Can we rename the main.js and main.css files to more meaningful names as this will help us identify what this plugin is used for.","Laxmikanth T D"
+"258797114","10966","Can we fix the indentation on this line?","Narasimha Kamath"
+"258807138","10966","Correct spelling","Laxmikanth T D"
+"258795982","10967","Has this code been tested by the QA?","Narasimha Kamath"
+"258798692","10967","Can we use updateAll here instead of save all?","Laxmikanth T D"
+"258837718","10967","Please get it tested and update pr for merge.","Laxmikanth T D"
+"258843636","10967","[https://projects.zoho.in/portal/mobisy#taskdetail/15779000000525378/15779000000620101/15779000001942175](https://projects.zoho.in/portal/mobisy#taskdetail/15779000000525378/15779000000620101/15779000001942175) - verified","Dharshan Kumar"
+"258798438","10968","Can we take this to master?","Laxmikanth T D"
+"259449722","10972","Hi,
+
+‌
+
+Laxmikanth as i checked there is no index on erp id column, can you please share the query and if require can you please add index on erp id.","Shubham Chawla"
+"261469533","10972","Can we create unique key index ? Because generally erp'_id should be unique is dere any use case of same erp'_id for the multiple schemegroup","Shubham Chawla"
+"258807651","10973","Cherry picked from dev.","Laxmikanth T D"
+"258868812","10977","I have tested in my local it is working fine, please merge","Pooja Chowti"
+"259293024","10980","Alignment issue.","Dharshan Kumar"
+"259390365","10980","This might have issue. Need to check any role can be come this then it's wrong for zone, Admin time.","Arvind Kandi"
+"259409967","10980","here we fetch all data with issampling 0 and 1.","Arvind Kandi"
+"259410084","10980","query plz.","Arvind Kandi"
+"259410104","10980","query plz.","Arvind Kandi"
+"259494705","10980","Will suggest using model functions instead of having to write duplicate queries everywhere.","Narasimha Kamath"
+"259494854","10980","Can use findByIDs'(') in User.php.","Narasimha Kamath"
+"259495111","10980","Can we use a better variable name here instead of all?","Narasimha Kamath"
+"259495316","10980","why is this hardcoded?","Dharshan Kumar"
+"259496371","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259496411","10980","Please use '{'} to close the if block.
+
+‌","Narasimha Kamath"
+"259496492","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259496958","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259496978","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259497128","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259497181","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259497234","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259497285","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259497317","10980","Please use '{'} to close the if block.","Narasimha Kamath"
+"259497549","10980","You can again make use of findByIDs'(') in Skunit.php to reduce code duplication.","Narasimha Kamath"
+"259497910","10980","You can make use of getUserTitlesByID'(') of User.php as well.","Narasimha Kamath"
+"259498405","10980","If this is the only company-wise setting that is required, you can pass it in the first parameter '(array')  of getSettingFromName, along with unsettle in line 955. We can avoid the usage of settings from session and also reduce a lot of code here.","Narasimha Kamath"
+"259477059","10988","The key used for true or false. They why its passing data.","Arvind Kandi"
+"259499334","10988","Will it be possible to keep the key as Data or something instead of Response? It adds a lot of confusion, hence the query.","Narasimha Kamath"
+"259499796","10988",,"Narasimha Kamath"
+"259500104","10988",,"Narasimha Kamath"
+"259501640","10988","Can we add an additional check of $value'['Size'']'['id'']? In case it is 0, then will result in an error.","Narasimha Kamath"
+"259699840","10988",,"Dharshan Kumar"
+"259491193","10989","space at the end of '","Shubham Chawla"
+"259666468","10996","Please get it communicated over email. to all so that this change doesn’t hamper the current working.","Laxmikanth T D"
+"259666391","10997","The function name and the action done doesn't match","Laxmikanth T D"
+"259660340","10998","Please explain what data it will store and how you calculationg this. 
+
+Here the data we checking for orderstates count and devided by quantity what is this logic?","Arvind Kandi"
+"260062507","11003","Why lock here?","Shubham Chawla"
+"260063600","11003","Are you sending same key from post request? If yes then where it is handled.","Shubham Chawla"
+"260063848","11003","space after brackets ","Shubham Chawla"
+"260063969","11003","code formatting issue
+
+‌","Shubham Chawla"
+"260064577","11003","In for sale i am not finding any changes?","Shubham Chawla"
+"259755950","11012","remove console","Pooja Chowti"
+"260052014","11014","If we are directly fetching from db then we have to remove warehouse id option from UI loadouts/lodins","Shubham Chawla"
+"260059326","11014","@{5af42b46057479603a2b5c35} Actually i am saying we should not send the warehouse id from ui for this ajax call. As i checked it’s internally calling loadoutsettle and which has warehouseId parameter. so it will be inconsistent. because user are sending 10 and that query is getting 12 warehouse id. so we have to make it consistent.","Shubham Chawla"
+"260061138","11014","Since the warehouseid parameter is coming in middle so we have to change more so for now approving the PR.","Shubham Chawla"
+"260041864","11015","Handle it at a single place instead of writing so much code","Dharshan Kumar"
+"259987946","11020","remove this function as it is not used
+
+Use get'_bd'_amount'_in'_text from helper ","Pooja Chowti"
+"259988274","11020","indentation","Pooja Chowti"
+"259988443","11020","indentation","Pooja Chowti"
+"259988477","11020","indentation","Pooja Chowti"
+"260037045","11021","Why do we need an '`<input /> in a UI that is used only for printing? Asking just for information.","Narasimha Kamath"
+"260021892","11022","use space before and after =>","Bhupendra Pandey"
+"260022902","11022",,"Bhupendra Pandey"
+"260346241","11027","Is it okay to allow the user to edit an inactive outlet contact? Asking for information.","Narasimha Kamath"
+"260302643","11029","Please handle in mdm file directly","Dharshan Kumar"
+"260929643","11032","space after ,","Laxmikanth T D"
+"260929676","11032","space after ,","Laxmikanth T D"
+"260294669","11034","why we are fetching all setting , cant only fetch `bizom_splash_screen`?","Bhupendra Pandey"
+"260294799","11034","cant we fetch setting here `bizom_splash_screen`?","Bhupendra Pandey"
+"260927379","11039","Please get it tested and update pr for merge.","Laxmikanth T D"
+"260492107","11040","get it verified once","Dharshan Kumar"
+"260491245","11046","because we are chaging code here..can we remove contain from here, if possible.","Bhupendra Pandey"
+"260491313","11046","because we cant predict here what query it is generating.","Bhupendra Pandey"
+"260821214","11046","As @{5abb6bafca78692a92e084c8} said proper query is generating approving this PR","Praveen Kulkarni"
+"260819891","11047","Alignment.","Dharshan Kumar"
+"260819933","11047","alignment.","Dharshan Kumar"
+"260925071","11052","do not re-assign a new array to $response,  
+use $response'['Result''] = true;  
+'$response'['Reason''] = 'Valid number';","Laxmikanth T D"
+"260926068","11052","without message catch plz do change.","Arvind Kandi"
+"260925196","11056","Please get it verified and update pr for merge.","Laxmikanth T D"
+"260835406","11058","Put on hold, testing is required
+
+‌","Dharshan Kumar"
+"260925365","11059","alignment.","Laxmikanth T D"
+"260841580","11060","here you are showing vc discount at row level but not including it in calculation, is this the requirement ?","Pooja Chowti"
+"260923162","11060","VC discount is a default feature in bizom and it should be part of prive always,  
+no matter they use setting or not.","Laxmikanth T D"
+"261390478","11060","Vc discount is always a part of unitprice, please do not handle it with parameters,  
+'$actualPrice = $unitprice '+ $qpsscheme '+ $discountData '+ $schemediscountData '+ $vcdiscount;  
+if'( $paymentDetail'['primarydiscountper''] > 0.000 ')'{  
+'$actualPrice = $actualPrice '* '( 100 / '( 100 - $paymentDetail'['primarydiscountper''] ')');  
+'}","Laxmikanth T D"
+"261963191","11060","primarydiscountper is a percentage whats the use case to multiple with quantity?","Laxmikanth T D"
+"260925283","11061","Please get it verified and update pr for merge.","Laxmikanth T D"
+"263145670","11061","Any Update?","Laxmikanth T D"
+"263148829","11061","It was verified ","Praveen Kulkarni"
+"263148900","11061","we can merge it to master ","Praveen Kulkarni"
+"260923866","11062","space after ,'(comma')  
+please check alignment and correct alignment for whole query.","Laxmikanth T D"
+"260923677","11064","space after ,'(comma') and space before and after => ","Laxmikanth T D"
+"260923691","11064","space after ,'(comma') and space before and after => ","Laxmikanth T D"
+"260923284","11065","replace array'_key'_exists to isset.","Laxmikanth T D"
+"260940746","11067","Please get it verified and update pr for merge.","Laxmikanth T D"
+"261212167","11069","Shall we use variable instead off hardcoding index ?","Praveen Kulkarni"
+"261214642","11069","@{5abb6bafca78692a92e084c8} Done approving.","Praveen Kulkarni"
+"261389328","11074","Warning: #1366 Incorrect integer value: '' for column 'hidden' at row 1","Laxmikanth T D"
+"261672171","11074","issue still exists for row 2,3,4  
+please correct in all.","Laxmikanth T D"
+"261389407","11075","please remove the new line in the description.","Laxmikanth T D"
+"261213196","11076","Please extend this to the server-side as well.
+
+‌","Praveen Kulkarni"
+"261963317","11076","define the default format of response,  
+the response format of an api cannot  change ever.","Laxmikanth T D"
+"261963519","11076","Donot reassign the $response  
+assign the values  
+'$response'['Result''] = false;  
+'$response'['Reason''] = ‘Please check the approve amount.';￼￼request you to use Reason as a key for messages, as it’s the same across bizom","Laxmikanth T D"
+"261498212","11083","check for existence of `deliveryChallanID`","Dharshan Kumar"
+"261499355","11083","Please share the Query.","Shubham Chawla"
+"261501493","11083","As i checked there is a uniquekey index on `form_name` and `transaction_type`, And here you mentioned this condition !empty, Suppose in any case it will not come then your query will be on trnasnctiontype it will not take any index because your sequence is form'_name and transction id. if both are required then add a condition above if'( !empty'(formname') && !empty'( `$transactionType` ')') and pass the message. otherwise please create index.
+
+‌","Shubham Chawla"
+"261503771","11083","Don’t mentioned setting name here instead of that please mention “ This feature is not enable. “","Shubham Chawla"
+"261505007","11083","Please share the query here.","Shubham Chawla"
+"261505745","11083","This condition is not required for admin you can write like that if'( $this->currentrole'[Managerole']'[role'_id'] > 1 ')","Shubham Chawla"
+"261512799","11083","Query Please.","Shubham Chawla"
+"261515796","11083","Why this is required now. Is there any past data will be uploaded in system. I don’t think it’s required.","Shubham Chawla"
+"261516153","11083","`Please remove this message ""The company-wise setting: isDeliveryChallanEnabled is disabled"" Intead of that you can show message please enable Delivery challan feature. becuase that is specific massege and we donot exposed that settings/allsetting url to client.` ","Shubham Chawla"
+"261516593","11083","Remove this condtion for admin role because admin can check all the datas.","Shubham Chawla"
+"261518055","11083","Please check the query performance on bigger data size.","Shubham Chawla"
+"261518125","11083","Shubham this is a feature by scheme to choose vat or gst,  
+This is needed for benefitbeforegst,  
+we support benefit to be given on pre gst / pre vat amounts.  
+[https://bugzilla.bizom.in/show'_bug.cgi?id=51169](https://bugzilla.bizom.in/show_bug.cgi?id=51169)","Laxmikanth T D"
+"261518855","11083","This is as good as a payment / order,  
+number of skunits sold in payment or number of skunits in a order
+
+Delivery challan being the foreign key which creates a index will be used here.
+
+‌","Laxmikanth T D"
+"261519349","11083","Add the condition here as well. role > 1","Laxmikanth T D"
+"261520591","11083","@{5abb6bdc18c3bd2a73fff26a} Got it and same feature we can use foreign client because they are not using.","Shubham Chawla"
+"261521468","11083","Please make currentUserId mandatory","Shubham Chawla"
+"261522175","11083","@{5abb6bdc18c3bd2a73fff26a} Right But we are just checking in safer side. Because lo of time we got surprise when we do query/api optimisation.","Shubham Chawla"
+"261524090","11083","If it can be null then please add validation. Because it will send null on function `getDepoPrice` because this `$fromWarehouseID` is using in this function.
+
+‌","Shubham Chawla"
+"261524967","11083","Please remove comment in code.","Shubham Chawla"
+"261525871","11083","Please follow the global comment.","Shubham Chawla"
+"261529307","11083","I checked in function `getPaymentDataByIdOrInvoiceId`. Here it accepts two optional parameter either payment id and invoice id. If both are not dere it’s scanning compete table please change in this function like if'( empty'( $paymentId ') || empty'( $invoiceId  ') ')'{
+
+//return here.
+
+'}  
+","Shubham Chawla"
+"261531147","11083","Remove the commented code.","Shubham Chawla"
+"261533476","11083","Please add condition `!empty ($deliveryChallanData` ') tthen proceed.","Shubham Chawla"
+"261533936","11083","Remove commented code.","Shubham Chawla"
+"261535289","11083","Code formatting issue.","Shubham Chawla"
+"261536531","11083","Wrong condition please change.","Shubham Chawla"
+"261538049","11083","Should have createdbyuser'_id and modfiebyuser'_id columns with forienkey. ","Shubham Chawla"
+"261687747","11083","Condition is wrong","Dharshan Kumar"
+"261688406","11083","Will this be used by retailers also?","Dharshan Kumar"
+"261962950","11095","Kindly note the RI is already merged to sanity,  
+Get this verified and merge this to sanity if this is needed in current release.","Laxmikanth T D"
+"261727715","11101","After verified will merge.","Arvind Kandi"
+"261778204","11109","Please remove console.logs","Kishan Reddy"
+"261963760","11109","Please get it verified and update pr for merge.","Laxmikanth T D"
+"262693968","11109","Can’t we do the include the join'(') logic in this map'(') itself? ","Narasimha Kamath"
+"261791104","11114","but t will update for all company na? why it is needed?","Bhupendra Pandey"
+"261791392","11114","We will have to remove code level support also here sir.  
+for a short cut method we are inactivating it so that if we need in future we can activate and add support again.","Laxmikanth T D"
+"261794401","11114","need to delete setting in this case then","Bhupendra Pandey"
+"262701998","11120","Is this as intended?  
+startdate is taken as toDate and and endate is taken as fromDate from the query params. ","Narasimha Kamath"
+"262705396","11120","As checked in the query condition below, it is considering between enddate and startdate, so having no issue with the logic here.","Narasimha Kamath"
+"262388850","11122","This PR should have been merged to Master. Please check","Preethi KH"
+"262333316","11129","This is sanity branch of Deliverychallan. Please check.","Arvind Kandi"
+"262405179","11130","Is the invoice is done through DIG. if not why?","Dharshan Kumar"
+"262700925","11134","Why cant we just set the value in insert itself,  
+why is an extra update command needed ?","Laxmikanth T D"
+"262701540","11134","Also if making the default value to 1, please update the description as well.","Narasimha Kamath"
+"262025211","11138","Out of curiosity I am asking why startdate is getting updated?","Dharshan Kumar"
+"262333647","11144","If we removed parent outlet of buyer and added seller it will right na no one using na.","Arvind Kandi"
+"262423997","11154","Do we need to display the deliverychallanID as the delivery challan number?","Narasimha Kamath"
+"262433510","11154","In [https://stagingjjcore.bizomstaging.in/deliverychallans/index](https://stagingjjcore.bizomstaging.in/deliverychallans/index) we are displaying deliverychallanID s the delivery challan number, they want same in invoice","Pooja Chowti"
+"262435147","11154","@{5f7f0ac858899e0070b294c7} Actually we show [deliverychallans.id](http://deliverychallans.id) in a column Delivery Challan ID, and deliverychallans.challan'_number in a column Delivery Challan Number.  
+However, these columns are configurable using form definition, so their alias/column header and visibility can be managed.  
+As checked in the above portal, it is working as per the above, so I am not sure if it will display the challan number  under ID column.","Narasimha Kamath"
+"262427134","11155","Can we run a loop on $skusforCompany and get the non-zero/non-empty variant'_id values from the data set and then prepare a query condition to be passed on to get the data from variants table?  
+This will also reduce fetching of unmapped data if there are a lot of those in the worst case scenario.  
+Moreover the same for loop can be used in the future if required for other SKU attributes like brands, subbrands, packaging etc…","Narasimha Kamath"
+"262429461","11155","Checked the data in GCPL production:  
+  
+Count of total variants defined: 67773  
+Count of unmapped variants: 67216  
+  
+There is only a need to fetch 67773-67216 entries of variants as compared to entire 67773.","Narasimha Kamath"
+"262704094","11155","If possible, you can add one more condition here if $variantIDs is non-empty, and it will not prepare an SQL query also.","Narasimha Kamath"
+"262693031","11162","If there are no UI level changes made for this API, is this change actually required? Asking because it will still fetch the active and inactive users, right?","Narasimha Kamath"
+"262878831","11175","IF it is blank also it’ll end up skipping this logic.","Laxmikanth T D"
+"262878974","11175","IF it is blank also it’ll end up skipping this logic.","Laxmikanth T D"
+"262879204","11175","INSERT commands can be converted to INSERT IGNORE INTO if the table has a unique key.  
+The query length can be reduced here.","Laxmikanth T D"
+"262879265","11175","INSERT commands can be converted to INSERT IGNORE INTO if the table has a unique key.  
+The query length can be reduced here.","Laxmikanth T D"
+"262879464","11175","Yes, please directly use INSERT IGNORE INTO ….","Narasimha Kamath"
+"262879625","11175","Add object Names Deliverychallantype. to 'refillStatus', 'refillPeriod'","Laxmikanth T D"
+"262882010","11175","Already there.","Arvind Kandi"
+"262883128","11175","@{5abb6bafca78692a92e084c8} Can we use Deliverychallantype.is'_refill'_enabled and Deliverychallantype.refill'_period, and change the format in object fields, and for the default value to be displayed in the browser like “-” or “Enabled”, we can make the client do that rendering part.","Narasimha Kamath"
+"262883522","11175","@{5b8d289dbe73352b233bbcc6} Yeah bro i had the  same query is it good to add virtual fields and generating string data?  
+here the payload size will also increase due to string data.  
+client can check the value and render it as needed.","Laxmikanth T D"
+"262970534","11178","Please update after verification.","Laxmikanth T D"
+"263141513","11181","brackets for if block.","Laxmikanth T D"
+"263141516","11181","brackets for if block.","Laxmikanth T D"
+"263141523","11181","brackets for if block.","Laxmikanth T D"
+"263141526","11181","brackets for if block.","Laxmikanth T D"
+"263140295","11184","adding foreign keys may lead to issues while creating company,  
+but following the alphabetical order deliverychallans table would have been created,  
+but it’s a good thing to add in separate revision.  
+can we move all foreign key to a revision ?","Laxmikanth T D"
+"263140324","11184","adding foreign keys may lead to issues while creating company,  
+but following the alphabetical order deliverychallans table would have been created,  
+but it’s a good thing to add in separate revision.  
+can we move all foreign key to a revision ?","Laxmikanth T D"
+"263150025","11184","Can we keep the default value as NULL for this?","Narasimha Kamath"
+"263151046","11184","Is this column used for approval/rejection? Will we need another field to identify if the invoice has been generated for this request?","Narasimha Kamath"
+"263151503","11184","Or we will make use of deliverychallan'_payment'_id for this?","Narasimha Kamath"
+"263151890","11184","Can we rename it as deliverychallan'_in'_inventory as it will be more understandable?","Narasimha Kamath"
+"263163951","11195","its better if we change the description as well.","Dharshan Kumar"
+"263313569","11202","Can we add the same support in the case of SingleLineText, Paragraph, and Image/Uplaoddata as well in this file?
+
+‌","Narasimha Kamath"
+"263237511","11203",,"Dharshan Kumar"
+"263312034","11203","Since we are modifying the name of a template, can we also an SQL query to update the invoicetemplatemappings.templatename?  
+  
+Found 1 entry in production DB: **SELECT '*  FROM invoicetemplatemappings WHERE templatename LIKE 'bambinoinvoicetemplate';**
+
+‌","Narasimha Kamath"
+"263389925","11203","bambinoinvoicetemplate is present in live portal but not present in bizom as a sql query,  
+it might have been added as a patch for the company.
+
+please get this deleted from the sql.","Laxmikanth T D"
+"263225894","11204",,"Laxmikanth T D"
+"263226272","11204",,"Narasimha Kamath"
+"263227671","11204","Why do we need the warehouseId param here? DC type is a separate entity without any association of the warehouses, right?","Narasimha Kamath"
+"263228782","11204","Can we fetch the setting in /skunits/getskunitsviewnew itself? And then we can override it when we are using this on sale.ctp, so then we can avoid an extra DB connection also.","Narasimha Kamath"
+"263384587","11209","Since we are using this query only for getting deliverychallans.transactionid to be passed to get the deliverychallandetails.skunit'_id, deliverychallandetails.batch'_id, and deliverychallandetails.quantity, can we use a single query with a join here?","Narasimha Kamath"
+"263384753","11209","Can we keep the default value of $orderData as array'(') instead of null? ","Narasimha Kamath"
+"263384797","11209","If using the second parameter $orderData as array'(') instead of null, please pass an empty array here instead of 0.","Narasimha Kamath"
+"263385081","11209","If the default value of $orderData is given as null, then this will give an error here `Invalid argument supplied for foreach()`. So can we keep the default value as array'(')?","Narasimha Kamath"
+"263385562","11209","Can we check if we can reduce the use of this inner foreach'(') here to reduce the complexity from O'(n2') to O'(n')?","Narasimha Kamath"
+"263385852","11209","Please use '{'} to start/close the block.","Narasimha Kamath"
+"263385924","11209","Can we use this as  
+
+```php
+$response['Result'] = $partialFulfillOrder;
+$response['Reason'] = '';
+```
+
+‌","Narasimha Kamath"
+"263385977","11209","Also this one as
+
+‌
+
+```php
+$response['Result'] = true;
+$response['Reason'] = '';
+$response['data'] = $orderData;
+```
+
+‌","Narasimha Kamath"
+"263386704","11209","Since we are not using any sort of insert/update DB operations for this check on partial fulfilment, can we move this block outside of the SQL transactions block?","Narasimha Kamath"
+"263411080","11209","Ignore this. We are inserting entry in DC for the respective order ID and then we will need to consider this as well for the summing.","Narasimha Kamath"
+"263752488","11212","fulfilment is not done by retailer, can we use the user'_id from the order ? as we need to check the user id of the order which was placed from.","Laxmikanth T D"
+"263752815","11212","As this is used during order fulfil and order creation this can be ignored.  
+anyways isUserRetailer is being used below.","Laxmikanth T D"
+"263766222","11212","Can we read this setting outside?","Dharshan Kumar"
+"263769019","11212","Here the data is  being taken from a variable and store in other table for future use if need be.","Laxmikanth T D"
